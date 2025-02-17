@@ -535,17 +535,17 @@
               <ul class="nav nav-pills flex-nowrap gap-2 pb-2 mb-1" role="tablist">
                 <li class="nav-item me-1" role="presentation">
                   <button type="button" class="nav-link text-nowrap active" id="personal-info-tab" data-bs-toggle="pill" data-bs-target="#personal-info" role="tab" aria-controls="personal-info" aria-selected="true">
-                    Personal info
+                    개인정보
                   </button>
                 </li>
                 <li class="nav-item me-1" role="presentation">
                   <button class="nav-link text-nowrap" id="security-tab" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
-                    Password and security
+                    비밀번호 및 보안
                   </button>
                 </li>
                 <li class="nav-item" role="presentation">
                   <button class="nav-link text-nowrap" id="notifications-tab" data-bs-toggle="pill" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false">
-                    Notification settings
+                    알림설정
                   </button>
                 </li>
               </ul>
@@ -558,7 +558,7 @@
                 <div class="vstack gap-4">
 
                   <!-- Profile completeness info card -->
-                  <div class="card bg-warning-subtle border-0 mb-2">
+                  <!-- <div class="card bg-warning-subtle border-0 mb-2">
                     <div class="card-body d-flex align-items-center">
                       <div class="circular-progress text-warning flex-shrink-0 ms-n2 ms-sm-0" role="progressbar" style="--fn-progress: 65" aria-label="Warning progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
                         <svg class="progress-circle">
@@ -586,10 +586,10 @@
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Profile picture (Avatar) -->
-                  <div class="d-flex align-items-start align-items-sm-center mb-2">
+                  <!-- <div class="d-flex align-items-start align-items-sm-center mb-2">
                     <div class="ratio ratio-1x1 hover-effect-opacity bg-body-tertiary border rounded-circle overflow-hidden" style="width: 124px">
                       <img src="assets/img/account/avatar-lg.jpg" alt="Avatar">
                       <div class="hover-effect-target position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 opacity-0">
@@ -606,7 +606,7 @@
                         Update photo
                       </button>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Settings form -->
                   <form class="needs-validation" novalidate>
@@ -617,57 +617,57 @@
                         <div class="invalid-tooltip bg-transparent p-0">이름을 입력해주세요!</div>
                       </div>
                       <div class="col position-relative">
-                        <label for="ln" class="form-label fs-base">성 별 *</label>
-                        <div class="form-check">
+                        <label for="ln" class="form-label fs-base">성 별 *</label><br>
+                        <div class="form-check ">
                           <input type="radio" class="form-check-input" id="ex-radio-1" name="radio">
                           <label for="ex-radio-1" class="form-check-label">남 성</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input type="radio" class="form-check-input" id="ex-radio-1" name="radio" checked>
-                          <label for="ex-radio-6" class="form-check-label">여 성</label>
+                          <input type="radio" class="form-check-input" id="ex-radio-2" name="radio">
+                          <label for="ex-radio-2" class="form-check-label">여 성</label>
                         </div>
                       </div>
                       <div class="col position-relative">
-                        <label for="email" class="form-label d-flex align-items-center fs-base">Email address * <span class="badge text-danger bg-danger-subtle ms-2">Verify email</span></label>
+                        <label for="email" class="form-label d-flex align-items-center fs-base">이메일 | Email * <span class="badge text-danger bg-danger-subtle ms-2">Verify email</span></label>
                         <input type="email" class="form-control form-control-lg" id="email" value="m.williams@example.com" required>
-                        <div class="invalid-tooltip bg-transparent p-0">Enter a valid email address!</div>
+                        <div class="invalid-tooltip bg-transparent p-0">유효한 이메일주소를 입력해주세요!</div>
                       </div>
                       <div class="col position-relative">
-                        <label for="phone" class="form-label d-flex align-items-center fs-base">Phone number * <span class="badge bg-success ms-2">Verified</span></label>
-                        <input type="tel" class="form-control form-control-lg" id="phone" data-input-format='{"numericOnly": true, "delimiters": ["(", ")", " ", "-", " "], "blocks": [0, 3, 0, 3, 4]}' value="(212) 555-7890" placeholder="(___) ___-____" required>
-                        <div class="invalid-tooltip bg-transparent p-0">Enter a valid phone number!</div>
+                        <label for="phone" class="form-label d-flex align-items-center fs-base">전화번호 * <span class="badge bg-success ms-2">Verified</span></label>
+                        <input type="tel" class="form-control form-control-lg" id="phone" data-input-format='{"numericOnly": true, "delimiters": ["(", ")", " ", "-", " "], "blocks": [0, 3, 0, 3, 4]}' value="(212) 555-7890" placeholder="___- ____-____" required>
+                        <div class="invalid-tooltip bg-transparent p-0">유효한 전화번호를 입력해주세요!</div>
                       </div>
                       <div class="col">
-                        <label class="form-label fs-base">Languages you speak</label>
-                        <select class="form-select form-select-lg" data-select multiple aria-label="Languages select">
-                          <option value="">Select language</option>
-                          <option value="English">English</option>
-                          <option value="Spanish">Spanish</option>
-                          <option value="French">French</option>
-                          <option value="German">German</option>
-                          <option value="Italian">Italian</option>
+                        <label class="form-label fs-base">관심 정비분야</label>
+                        <select class="form-select form-select-lg" data-select multiple aria-label="gear select">
+                          <option value="">관심 정비분야 선택</option>
+                          <option value="English">구동계</option>
+                          <option value="Spanish">휠셋</option>
+                          <option value="French">핸들바,스템,싯포스트</option>
+                          <option value="German">기타 컴포넌트</option>
+                          <option value="Italian">소모품 주기관리</option>
                         </select>
                       </div>
                       <div class="col">
-                        <label for="birth-date" class="form-label fs-base">Date of birth</label>
+                        <label for="birth-date" class="form-label fs-base">생년월일</label>
                         <div class="position-relative">
-                          <input type="text" class="form-control form-control-lg form-icon-end" id="birth-date" data-datepicker='{"dateFormat": "F j, Y"}' placeholder="Choose date">
+                          <input type="text" class="form-control form-control-lg form-icon-end" id="birth-date" data-datepicker placeholder="날짜를 선택해주세요.">
                           <i class="fi-calendar fs-lg position-absolute top-50 end-0 translate-middle-y me-3"></i>
                         </div>
                       </div>
                     </div>
                     <div class="position-relative mb-4">
-                      <label for="address" class="form-label fs-base">Address *</label>
+                      <label for="address" class="form-label fs-base">주 소 *</label>
                       <input type="text" class="form-control form-control-lg" id="address" value="New York, Brooklyn" required>
-                      <div class="invalid-tooltip bg-transparent p-0">Enter your address!</div>
+                      <div class="invalid-tooltip bg-transparent p-0">주소를 입력해주세요!</div>
                     </div>
                     <div class="pb-2 mb-4">
-                      <label for="user-info" class="form-label fs-base">Information about you</label>
-                      <textarea class="form-control form-control-lg bg-transparent" id="user-info" rows="6">Extensive experience in rentals and a vast database means I can quickly find the options that are right for you. Looking for a seamless and exciting rental experience? Contact me today - I promise it won't be boring! Your perfect home is just a call away.</textarea>
+                      <label for="user-info" class="form-label fs-base">메모</label>
+                      <textarea class="form-control form-control-lg bg-transparent" id="user-info" rows="6"> </textarea>
                     </div>
                     <div class="d-flex gap-3">
-                      <a class="btn btn-lg btn-secondary" href="account-profile.html">Cancel</a>
-                      <button type="submit" class="btn btn-lg btn-dark">Save changes</button>
+                      <a class="btn btn-lg btn-secondary" href="account-profile.html">취소</a>
+                      <button type="submit" class="btn btn-lg btn-dark">저장하기</button>
                     </div>
                   </form>
                 </div>
@@ -676,16 +676,16 @@
 
               <!-- Password and security tab -->
               <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-                <p class="mb-sm-4">Your current email address is <span class="fw-medium text-primary">m.williams@example.com</span></p>
+                <p class="mb-sm-4">가입에 이용하신 이메일주소는 <span class="fw-medium text-primary">m.williams@example.com</span> 입니다.</p>
 
                 <!-- Change password form -->
                 <form class="needs-validation" novalidate>
                   <div class="row row-cols-1 row-cols-sm-2 g-4 mb-4">
                     <div class="col">
-                      <label for="current-password" class="form-label fs-base">Current password</label>
+                      <label for="current-password" class="form-label fs-base">현재 비밀번호 | Current password</label>
                       <div class="password-toggle">
                         <input type="password" class="form-control form-control-lg" id="current-password" required>
-                        <div class="invalid-tooltip bg-transparent p-0">Incorrect password. Please try again.</div>
+                        <div class="invalid-tooltip bg-transparent p-0">잘못입력하셨습니다. 다시 입력해주세요.</div>
                         <label class="password-toggle-button" aria-label="Show/hide password">
                           <input type="checkbox" class="btn-check">
                         </label>
@@ -694,34 +694,34 @@
                   </div>
                   <div class="row row-cols-1 row-cols-sm-2 g-4 mb-4">
                     <div class="col">
-                      <label for="new-password" class="form-label fs-base">New password <span class="fs-sm fw-normal text-body-secondary">(Min 8 chars)</span></label>
+                      <label for="new-password" class="form-label fs-base">새 비밀번호 | New password <span class="fs-sm fw-normal text-body-secondary">(최소 8자리 이상)</span></label>
                       <div class="password-toggle">
                         <input type="password" class="form-control form-control-lg" minlength="8" id="new-password" required>
-                        <div class="invalid-tooltip bg-transparent p-0">Please ensure password is at least 8 characters long.</div>
+                        <div class="invalid-tooltip bg-transparent p-0">최소 8자리 이상의 비밀번호를 입력해주세요.</div>
                         <label class="password-toggle-button" aria-label="Show/hide password">
                           <input type="checkbox" class="btn-check">
                         </label>
                       </div>
                     </div>
-                    <div class="col">
-                      <label for="confirm-new-password" class="form-label fs-base">Confirm new password</label>
+                    <!-- <div class="col">
+                      <label for="confirm-new-password" class="form-label fs-base">새 비밀번호 확인 | Confirm new password</label>
                       <div class="password-toggle">
                         <input type="password" class="form-control form-control-lg" minlength="8" id="confirm-new-password" required>
-                        <div class="invalid-tooltip bg-transparent p-0">Passwords do not match.</div>
+                        <div class="invalid-tooltip bg-transparent p-0">비밀번호가 일치하지 않습니다.</div>
                         <label class="password-toggle-button" aria-label="Show/hide password">
                           <input type="checkbox" class="btn-check">
                         </label>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="d-flex gap-3">
-                    <button type="reset" class="btn btn-lg btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-lg btn-dark">Update password</button>
+                    <button type="reset" class="btn btn-lg btn-secondary">취소</button>
+                    <button type="submit" class="btn btn-lg btn-dark">비밀번호 변경</button>
                   </div>
                 </form>
 
                 <!-- Device history -->
-                <h3 class="h4 pt-5 mt-md-3 mb-sm-4">Device history</h3>
+                <!-- <h3 class="h4 pt-5 mt-md-3 mb-sm-4">Device history</h3>
                 <div class="row g-3 g-xl-4 mb-3 mb-md-4">
                   <div class="col-sm-6 col-md-4">
                     <div class="card h-100">
@@ -780,16 +780,16 @@
                     <i class="fi-log-out fs-base me-2"></i>
                     <span class="hover-effect-underline stretched-link">Sign out of all sessions</span>
                   </a>
-                </div>
+                </div> -->
 
                 <!-- Delete account -->
-                <h3 class="h4 pt-5 mt-n2 mt-md-0 mt-lg-2 mt-xl-3 mb-sm-4">Delete account</h3>
-                <p class="fs-sm mb-sm-4">When you delete your account, your public profile will be deactivated immediately. If you change your mind before the 14 days are up, sign in with your email and password, and we'll send a link to reactivate account.</p>
+                <h3 class="h4 pt-5 mt-n2 mt-md-0 mt-lg-2 mt-xl-3 mb-sm-4">계정삭제하기</h3>
+                <p class="fs-sm mb-sm-4">계정을 삭제하시면 해당 계정은 즉시 비활성화되며, 14일 이내 로그인을 하시면 계정 재활성안내 이메일을 보내드립니다.</p>
                 <div class="form-check mb-4">
                   <input type="checkbox" class="form-check-input" id="confirm-deletion">
-                  <label for="confirm-deletion" class="form-check-label">Yes, I want to delete my account</label>
+                  <label for="confirm-deletion" class="form-check-label">계정 삭제 동의</label>
                 </div>
-                <button type="button" class="btn btn-lg btn-outline-danger">Delete account</button>
+                <button type="button" class="btn btn-lg btn-outline-danger">계정 삭제하기</button>
               </div>
 
 
