@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Bicycle Doctors</title>
-    <meta name="description" content="Bicycle Doctors">
-    <meta name="keywords" content="bicycle, bike, roadbike, mtb, minivelo, cycle, doctors">
-    <meta name="author" content="JeongByeongJo">
+    <title>Finder | Real Estate - Map/Listings Split View</title>
+    <meta name="description" content="Finder - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="Createx Studio">
 
     <!-- Webmanifest + Favicon / App icons -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -45,103 +45,277 @@
   <body>
 
     <!-- Filters offcanvas -->
-    <!-- Appointment booking offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="bookAppointment">
-      <div class="offcanvas-header pt-3">
-        <h5 class="offcanvas-title">점검&정비 예약하기</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bookAppointment-1" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-end" id="filters" tabindex="-1" style="width: 820px">
+
+      <!-- Header -->
+      <div class="offcanvas-header px-sm-5">
+        <h4 class="h5 offcanvas-title">All filters</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body d-block pt-0">
-        <div class="col">
-          <label class="form-label fs-base">점검 & 정비 선택</label>
-          <select class="form-select form-select-lg" data-select multiple aria-label="gear select">
-            <option value="">점검 & 정비 분야 선택</option>
-            <option value="Drivetrain">구동계</option>
-            <option value="Wheelset">휠셋</option>
-            <option value="Handle">핸들바,스템,싯포스트</option>
-            <option value="Components">기타 컴포넌트</option>
-            <option value="Expendables">소모품 관리</option>
-          </select>
-        </div>
-        <div class="d-flex gap-4 pb-2 mb-1">
-          <!-- <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="visit-method">
-              점 검
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="visit-method">
-              정 비
-            </label>
-          </div> -->
-        </div>
-        <div class="btn-group w-100" role="group" aria-label="Date/time selection">
-          <input type="radio" class="btn-check" name="visit-day" id="visit-day-1" checked>
-          <label class="btn btn-outline-info w-100 px-2" for="visit-day-1">Mon, 11</label>
-          <input type="radio" class="btn-check" name="visit-day" id="visit-day-2" checked>
-          <label class="btn btn-outline-info w-100 px-2" for="visit-day-2">Tue, 12</label>
-          <input type="radio" class="btn-check" name="visit-day" id="visit-day-3">
-          <label class="btn btn-outline-info w-100 px-2" for="visit-day-3">Wed, 13</label>
-          <button type="button" class="btn btn-icon btn-outline-info flex-grow-0 px-2" aria-label="Next">
-            <i class="fi-chevron-right fs-lg"></i>
-          </button>
-        </div>
-        <div class="row row-cols-4 g-2 pt-4 pb-2">
+
+      <!-- Body (Filter inputs) -->
+      <div class="offcanvas-body pt-2 pb-3 px-sm-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4 pb-3 mb-3">
           <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-1">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-1">10:00</label>
+            <h6>Choose your location</h6>
+            <div class="position-relative w-100">
+              <i class="fi-map-pin position-absolute top-50 start-0 translate-middle-y z-1 ms-3"></i>
+              <input type="search" class="form-control form-icon-start" value="New York, Brooklyn" placeholder="Search for location">
+            </div>
           </div>
           <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-2">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-2">10:30</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-3">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-3">11:00</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-4">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-4">11:30</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-5">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-5">12:00</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-6" checked>
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-6">12:30</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-7">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-7">13:00</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-8">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-8">13:30</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-9">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-9">14:00</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-10">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-10">14:30</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-11">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-11">15:00</label>
-          </div>
-          <div class="col">
-            <input type="radio" class="btn-check" name="visit-time" id="visit-time-12">
-            <label class="btn btn-outline-secondary w-100 rounded-pill px-2" for="visit-time-12">15:30</label>
+            <h6>Home type</h6>
+            <div class="row g-3">
+              <div class="col-5">
+                <select class="form-select" data-select='{"removeItemButton": false}' aria-label="Rent or sale select">
+                  <option value="For rent">For rent</option>
+                  <option value="For sale">For sale</option>
+                </select>
+              </div>
+              <div class="col-7">
+                <div class="dropdown w-100">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle justify-content-between w-100 text-body fw-normal px-3" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                    <i class="fi-home fs-base me-2"></i>
+                    Home type <span class="ms-1 me-auto" id="typeCountOffcanvas"></span>
+                  </button>
+                  <div class="dropdown-menu w-100 p-3" style="--fn-dropdown-min-width: 0">
+                    <div class="d-flex flex-column gap-2">
+                      <div class="form-check m-0">
+                        <input type="checkbox" class="form-check-input fs-base" id="apartments-offcanvas" checked onclick="updateFilterCount('typeCountOffcanvas')" data-count-id="typeCountOffcanvas">
+                        <label for="apartments-offcanvas" class="form-check-label d-flex align-items-end">
+                          Apartments
+                          <span class="fs-xs text-body-secondary ps-2 ms-auto">621</span>
+                        </label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input type="checkbox" class="form-check-input fs-base" id="houses-offcanvas" onclick="updateFilterCount('typeCountOffcanvas')" data-count-id="typeCountOffcanvas">
+                        <label for="houses-offcanvas" class="form-check-label d-flex align-items-end">
+                          Houses
+                          <span class="fs-xs text-body-secondary ps-2 ms-auto">157</span>
+                        </label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input type="checkbox" class="form-check-input fs-base" id="condos-offcanvas" onclick="updateFilterCount('typeCountOffcanvas')" data-count-id="typeCountOffcanvas">
+                        <label for="condos-offcanvas" class="form-check-label d-flex align-items-end">
+                          Condos
+                          <span class="fs-xs text-body-secondary ps-2 ms-auto">283</span>
+                        </label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input type="checkbox" class="form-check-input fs-base" id="townhomes-offcanvas" onclick="updateFilterCount('typeCountOffcanvas')" data-count-id="typeCountOffcanvas">
+                        <label for="townhomes-offcanvas" class="form-check-label d-flex align-items-end">
+                          Townhomes
+                          <span class="fs-xs text-body-secondary ps-2 ms-auto">346</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <button type="button" class="btn btn-lg btn-primary w-100 mt-4">
-          <i class="fi-clock fs-lg me-2 ms-n1"></i>
-          Next appointment 12:30, Tue, 12
-        </button>
+        <div class="row row-cols-1 row-cols-md-2 g-4 pb-3 mb-3">
+          <div class="col">
+            <h6>Price per month, $</h6>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control w-50" min="0" step="50" placeholder="Min">
+              <i class="fi-minus mx-2"></i>
+              <input type="number" class="form-control w-50" step="50" placeholder="Max">
+            </div>
+          </div>
+          <div class="col">
+            <h6>Square metres</h6>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control w-50" min="0" step="10" placeholder="Min">
+              <i class="fi-minus mx-2"></i>
+              <input type="number" class="form-control w-50" step="10" placeholder="Max">
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 pb-3 mb-3">
+          <div class="col">
+            <h6>Bedrooms</h6>
+            <div class="nav nav-pills gap-2">
+              <div>
+                <input type="radio" class="btn-check" id="bedrooms-any" name="bedrooms" checked>
+                <label class="nav-link rounded" for="bedrooms-any">Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bedrooms-1" name="bedrooms">
+                <label class="nav-link rounded" for="bedrooms-1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bedrooms-2" name="bedrooms">
+                <label class="nav-link rounded" for="bedrooms-2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bedrooms-3" name="bedrooms">
+                <label class="nav-link rounded" for="bedrooms-3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bedrooms-4" name="bedrooms">
+                <label class="nav-link rounded" for="bedrooms-4">4+</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h6>Bathrooms</h6>
+            <div class="nav nav-pills gap-2">
+              <div>
+                <input type="radio" class="btn-check" id="bathrooms-any" name="bathrooms" checked>
+                <label class="nav-link rounded" for="bathrooms-any">Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bathrooms-1" name="bathrooms">
+                <label class="nav-link rounded" for="bathrooms-1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bathrooms-2" name="bathrooms">
+                <label class="nav-link rounded" for="bathrooms-2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bathrooms-3" name="bathrooms">
+                <label class="nav-link rounded" for="bathrooms-3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" id="bathrooms-4" name="bathrooms">
+                <label class="nav-link rounded" for="bathrooms-4">4+</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 pb-3 mb-3">
+          <div class="col">
+            <h6>Year built</h6>
+            <div class="d-flex align-items-center">
+              <div class="w-50">
+                <select class="form-select" data-select aria-label="Min year built select">
+                  <option value="">Min</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                  <option value="2011">2011</option>
+                  <option value="2010">2010</option>
+                </select>
+              </div>
+              <i class="fi-minus mx-2"></i>
+              <div class="w-50">
+                <select class="form-select" data-select aria-label="Max year built select">
+                  <option value="">Max</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                  <option value="2011">2011</option>
+                  <option value="2010">2010</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6>Amenities</h6>
+        <div class="row row-cols-2 gy-2 gx-4 pb-3 mb-3">
+          <div class="col vstack gap-2">
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="ac" checked>
+              <label for="ac" class="form-check-label">Air conditioning</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="balcony">
+              <label for="balcony" class="form-check-label">Balcony</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="garage">
+              <label for="garage" class="form-check-label">Garage</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="gym">
+              <label for="gym" class="form-check-label">Gym</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="parking" checked>
+              <label for="parking" class="form-check-label">Parking</label>
+            </div>
+          </div>
+          <div class="col vstack gap-2">
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="pool">
+              <label for="pool" class="form-check-label">Pool</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="cctv">
+              <label for="cctv" class="form-check-label">Security cameras</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="wifi" checked>
+              <label for="wifi" class="form-check-label">WiFi</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="laundry">
+              <label for="laundry" class="form-check-label">Laundry</label>
+            </div>
+            <div class="form-check m-0">
+              <input type="checkbox" class="form-check-input" id="dishwasher">
+              <label for="dishwasher" class="form-check-label">Dishwasher</label>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-2 g-4">
+          <div class="col">
+            <h6>Pets</h6>
+            <div class="vstack gap-2">
+              <div class="form-check m-0">
+                <input type="checkbox" class="form-check-input" id="cats" checked>
+                <label for="cats" class="form-check-label">Cats allowed</label>
+              </div>
+              <div class="form-check m-0">
+                <input type="checkbox" class="form-check-input" id="dogs">
+                <label for="dogs" class="form-check-label">Dogs allowed</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h6>Additional options</h6>
+            <div class="vstack gap-2">
+              <div class="form-check m-0">
+                <input type="checkbox" class="form-check-input" id="verified">
+                <label for="verified" class="form-check-label">Verified</label>
+              </div>
+              <div class="form-check m-0">
+                <input type="checkbox" class="form-check-input" id="featured">
+                <label for="featured" class="form-check-label">Featured</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer: Action buttons -->
+      <div class="d-flex justify-content-between align-items-center p-4 px-sm-5">
+        <div class="nav">
+          <a class="nav-link fs-xs text-decoration-underline text-nowrap p-0" href="#!">Clear all</a>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">See 156 properties</button>
       </div>
     </div>
 
@@ -156,11 +330,11 @@
         </button>
 
         <!-- Navbar brand (Logo) -->
-        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-doctors.html">
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-real-estate.html">
           <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
           </span>
-          Bicycle Doctors
+          Finder
         </a>
 
         <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
@@ -659,19 +833,19 @@
                     <a class="swiper-wrapper" href="single-entry-real-estate.html">
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/bd/1731905799997173.jpg" alt="Image">
+                          <img src="assets/img/listings/real-estate/01.jpg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/bd/1731905809524829.jpg" alt="Image">
+                          <img src="assets/img/listings/real-estate/01.jpg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/bd/1731905825460932.jpg" alt="Image">
+                          <img src="assets/img/listings/real-estate/01.jpg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
@@ -702,23 +876,22 @@
                   </div>
                 </div>
                 <div class="card-body p-3">
-                  <div class="h5 mb-2">섭바이크</div>
+                  <div class="h5 mb-2">$1,620</div>
                   <h3 class="fs-sm fw-normal text-body mb-2">
-                    <!-- <a class="stretched-link text-body" href="single-entry-ㅇreal-estate.html"> -->
-                      서울 중랑구 망우동 303-14 1층 <br> 02-978-0719
-                    <!-- </a> -->
+                    <a class="stretched-link text-body" href="single-entry-real-estate.html">40 S 9th St, Brooklyn, NY 11249</a>
                   </h3>
-                  <!-- <div class="h6 fs-sm mb-0">65 sq.m</div> -->
+                  <div class="h6 fs-sm mb-0">65 sq.m</div>
                 </div>
                 <div class="card-footer d-flex gap-2 border-0 bg-transparent pt-0 pb-3 px-3 mt-n1">
-                  <!-- <div class="position-absolute top-0 end-0 "> -->
-                    <!-- <button type="button" class="btn btn-sm btn-icon btn-light bg-light border-0 rounded-circle animate-pulse" aria-label="Add to wishlist">
-                      <i class="fi-heart animate-target fs-sm"></i>
-                    </button> -->
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#bookAppointment" aria-controls="bookAppointment">
-                      점검&정비 예약하기
-                    </button>
-                  <!-- </div> -->
+                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
+                    2<i class="fi-bed-single fs-base text-secondary-emphasis"></i>
+                  </div>
+                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
+                    1<i class="fi-shower fs-base text-secondary-emphasis"></i>
+                  </div>
+                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
+                    1<i class="fi-car-garage fs-base text-secondary-emphasis"></i>
+                  </div>
                 </div>
               </article>
             </div>

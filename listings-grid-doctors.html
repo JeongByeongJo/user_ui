@@ -45,33 +45,34 @@
     <!-- Appointment booking offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="bookAppointment">
       <div class="offcanvas-header pt-3">
-        <h5 class="offcanvas-title">Book an appointment</h5>
+        <h5 class="offcanvas-title">점검&정비 예약하기</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bookAppointment-1" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body d-block pt-0">
-        <ul class="list-unstyled gap-1 fs-sm text-body-secondary mb-4">
-          <li>
-            <span class="fs-6 fw-semibold text-primary me-1">$35.00</span>
-            Online consultation
-          </li>
-          <li>
-            <span class="fs-6 fw-semibold text-dark-emphasis me-1">$50.00</span>
-            Visiting the clinic
-          </li>
-        </ul>
+        <div class="col">
+          <label class="form-label fs-base">점검 & 정비 선택</label>
+          <select class="form-select form-select-lg" data-select multiple aria-label="gear select">
+            <option value="">점검 & 정비 분야 선택</option>
+            <option value="Drivetrain">구동계</option>
+            <option value="Wheelset">휠셋</option>
+            <option value="Handle">핸들바,스템,싯포스트</option>
+            <option value="Components">기타 컴포넌트</option>
+            <option value="Expendables">소모품 관리</option>
+          </select>
+        </div>
         <div class="d-flex gap-4 pb-2 mb-1">
-          <div class="form-check form-switch">
+          <!-- <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="visit-method" checked>
-              Online
+              <input type="checkbox" class="form-check-input" name="visit-method">
+              점 검
             </label>
           </div>
-          <div class="form-check form-switch">
+          <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="visit-method">
-              Visit clinic
+              <input type="checkbox" class="form-check-input" name="visit-method">
+              정 비
             </label>
-          </div>
+          </div> -->
         </div>
         <div class="btn-group w-100" role="group" aria-label="Date/time selection">
           <input type="radio" class="btn-check" name="visit-day" id="visit-day-1" checked>
@@ -555,14 +556,14 @@
                   <div class="d-md-none" style="width: 48px"></div>
                   <div class="d-none d-sm-block d-xl-none" style="width: 100px"></div>
                   <div class="d-none d-xl-block" style="width: 150px"></div>
-                  <div class="ratio" style="--fn-aspect-ratio: calc(164 / 150 * 100%)">
-                    <img src="assets/img/listings/doctors/08.jpg" class="bg-body-secondary rounded" alt="Image">
+                  <div class="ratio" style="--fn-aspect-ratio: calc(1000 / 600 * 100%)">
+                    <img src="assets/img/listings/bd/1731905799997173.jpg" class="bg-body-secondary rounded" alt="Image">
                   </div>
                 </div>
                 <div class="w-100 ps-sm-4">
                   <div class="d-flex flex-wrap align-items-center justify-content-between ms-3 ms-sm-0 mb-2">
                     <h3 class="h5 me-2 mb-0">
-                      <a class="hover-effect-underline stretched-link" href="single-entry-doctors.html">Dr. Sophia Davis</a>
+                      <a class="hover-effect-underline stretched-link" href="single-entry-doctors.html">섭바이크</a>
                     </h3>
                     <div class="d-flex align-items-center gap-1">
                       <i class="fi-star-filled text-warning"></i>
@@ -578,7 +579,7 @@
                     </li>
                     <li class="d-flex align-items-center fs-sm">
                       <i class="fi-award fs-base me-1"></i>
-                      7 years experience
+                      17 years experience
                     </li>
                     <li class="d-flex align-items-center fs-sm">
                       <i class="fi-baby fs-base me-1"></i>
@@ -606,7 +607,7 @@
                     <div class="fs-sm">Online / Offline / Home visit</div>
                   </div>
                   <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#bookAppointment" aria-controls="bookAppointment">
-                    Book an appointment
+                    점검&정비 예약하기
                   </button>
                 </div>
               </div>
