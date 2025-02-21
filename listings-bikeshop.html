@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/vendor/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/flatpickr/dist/flatpickr.min.css">
 
     <!-- Bootstrap + Theme styles -->
     <link rel="preload" href="assets/css/theme.min.css" as="style">
@@ -55,10 +56,13 @@
         <div class="col">
           <label class="form-label fs-base">점검 & 정비 선택</label>
           <select class="form-select form-select-lg" data-select multiple aria-label="gear select">
-            <option value="">점검 & 정비 분야 선택</option>
+            <option value=""></option>
             <option value="Drivetrain">구동계</option>
+            <option value="Brakes">브레이크</option>
+            <option value="Shocks">샥</option>
             <option value="Wheelset">휠셋</option>
-            <option value="Handle">핸들바,스템,싯포스트</option>
+            <option value="Pedals">페달</option>
+            <option value="Cockpit">콕핏(핸들바,헤드셋 등)</option>
             <option value="Components">기타 컴포넌트</option>
             <option value="Expendables">소모품 관리</option>
           </select>
@@ -156,7 +160,7 @@
         </button>
 
         <!-- Navbar brand (Logo) -->
-        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-doctors.html">
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home.html">
           <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
           </span>
@@ -171,228 +175,14 @@
           </div>
           <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
             <ul class="navbar-nav position-relative">
-              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
-                <ul class="dropdown-menu">
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-real-estate.html">
-                      <span class="fw-medium">Real Estate</span>
-                      <span class="d-block fs-xs text-body-secondary">Property listings directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/real-estate-light.jpg" alt="Real Estate Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/real-estate-dark.jpg" alt="Real Estate Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-cars.html">
-                      <span class="fw-medium">Cars</span>
-                      <span class="d-block fs-xs text-body-secondary">Vehicle sales listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/cars-light.jpg" alt="Cars Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/cars-dark.jpg" alt="Cars Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-contractors.html">
-                      <span class="fw-medium">Contractors</span>
-                      <span class="d-block fs-xs text-body-secondary">Professional services directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/contractors-light.jpg" alt="Contractors Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/contractors-dark.jpg" alt="Contractors Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-doctors.html">
-                      <span class="fw-medium">Doctors</span>
-                      <span class="d-block fs-xs text-body-secondary">Medical professionals listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/doctors-light.jpg" alt="Doctors Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/doctors-dark.jpg" alt="Doctors Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-events.html">
-                      <span class="fw-medium">Events</span>
-                      <span class="d-block fs-xs text-body-secondary">Upcoming events listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/events-light.jpg" alt="Events Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/events-dark.jpg" alt="Events Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-city-guide.html">
-                      <span class="fw-medium">City Guide</span>
-                      <span class="d-block fs-xs text-body-secondary">Local places directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/city-guide-light.jpg" alt="City Guide Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/city-guide-dark.jpg" alt="City Guide Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+              <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
+                <a class="nav-link" href="home.html">홈</a>
               </li>
-              <li class="nav-item dropdown position-static py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Listings</a>
-                <div class="dropdown-menu rounded-4 p-4">
-                  <div class="d-flex flex-column flex-lg-row gap-4">
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Real Estate</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-real-estate.html">Map/Listings Split View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-real-estate.html">Property Details Page</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="vendor-real-estate.html">Vendor Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Cars</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-grid-cars.html">Listings Grid View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-list-cars.html">Listings List View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-cars.html">Car Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Contractors</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-contractors.html">Listings with Side Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-contractors.html">Contractor Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Doctors</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-list-doctors.html">Listings List View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-grid-doctors.html">Listings Grid View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-doctors.html">Doctor Details Page</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Events</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-events.html">Listings with Top Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-events.html">Event Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">City Guide</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-side-filters-city-guide.html">Listings with Side Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-top-filters-city-guide.html">Listings with Top Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-city-guide.html">Place Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Add Property</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-type.html">Property type</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-location.html">Location</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-photos.html">Photos and Videos</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-details.html">Property Details</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-price.html">Price</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-contact-info.html">Contact Info</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-promotion.html">Ad Promotion</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Add Contractor</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-location.html">Business Location</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-services.html">Choose Services</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-profile.html">Profile Details</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-price-hours.html">Price and Hours</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-project.html">Create First Project</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Add (Sell) Car</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-car.html">Add (Sell) Car Page</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+              <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
+                <a class="nav-link" href="add-property-type.html">자전거 등록하기</a>
               </li>
-              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
-                <ul class="dropdown-menu">
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="account-signin.html">Sign In</a></li>
-                      <li><a class="dropdown-item" href="account-signup.html">Sign Up</a></li>
-                      <li><a class="dropdown-item" href="account-password-recovery.html">Password Recovery</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="account-profile.html">My Profile</a></li>
-                  <li><a class="dropdown-item" href="account-listings.html">My Listings</a></li>
-                  <li><a class="dropdown-item" href="account-reviews.html">Reviews</a></li>
-                  <li><a class="dropdown-item" href="account-favorites.html">Favorites</a></li>
-                  <li><a class="dropdown-item" href="account-payment.html">Payment Details</a></li>
-                  <li><a class="dropdown-item" href="account-settings.html">Account Settings</a></li>
-                </ul>
+              <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
+                <a class="nav-link" href="listings-bikeshop.html">점검 & 정비</a>
               </li>
               <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Pages</a>
@@ -547,53 +337,31 @@
             <div class="d-none d-md-block d-lg-none" style="height: 72px;  margin-top: -72px"></div>
             <div class="d-none d-lg-block" style="height: 76px; margin-top: -76px"></div>
             <div class="d-flex gap-2 gap-sm-3 py-2 py-sm-3">
-              <div class="position-relative w-100">
+              <div class="position-relative" style="width: 500px">
                 <i class="fi-map-pin position-absolute top-50 start-0 translate-middle-y z-1 ms-3"></i>
                 <input type="search" class="form-control form-icon-start" value="New York, Brooklyn" placeholder="Search for location">
               </div>
               <div class="flex-shrink-0 d-none d-md-block" style="width: 140px">
-                <select class="form-select" data-select='{"removeItemButton": false}' aria-label="Rent or sale select">
-                  <option value="For rent">For rent</option>
-                  <option value="For sale">For sale</option>
-                </select>
-              </div>
-              <div class="dropdown flex-shrink-0 d-none d-xxl-block" style="width: 180px">
-                <button type="button" class="btn btn-outline-secondary dropdown-toggle justify-content-between w-100 text-body fw-normal px-3" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-                  <i class="fi-home fs-base me-2"></i>
-                  Home type <span class="ms-1 me-auto" id="typeCount"></span>
-                </button>
-                <div class="dropdown-menu w-100 p-3" style="--fn-dropdown-min-width: 0">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="form-check m-0">
-                      <input type="checkbox" class="form-check-input fs-base" id="apartments" checked onclick="updateFilterCount('typeCount')" data-count-id="typeCount">
-                      <label for="apartments" class="form-check-label d-flex align-items-end">
-                        Apartments
-                        <span class="fs-xs text-body-secondary ps-2 ms-auto">621</span>
-                      </label>
-                    </div>
-                    <div class="form-check m-0">
-                      <input type="checkbox" class="form-check-input fs-base" id="houses" onclick="updateFilterCount('typeCount')" data-count-id="typeCount">
-                      <label for="houses" class="form-check-label d-flex align-items-end">
-                        Houses
-                        <span class="fs-xs text-body-secondary ps-2 ms-auto">157</span>
-                      </label>
-                    </div>
-                    <div class="form-check m-0">
-                      <input type="checkbox" class="form-check-input fs-base" id="condos" onclick="updateFilterCount('typeCount')" data-count-id="typeCount">
-                      <label for="condos" class="form-check-label d-flex align-items-end">
-                        Condos
-                        <span class="fs-xs text-body-secondary ps-2 ms-auto">283</span>
-                      </label>
-                    </div>
-                    <div class="form-check m-0">
-                      <input type="checkbox" class="form-check-input fs-base" id="townhomes" onclick="updateFilterCount('typeCount')" data-count-id="typeCount">
-                      <label for="townhomes" class="form-check-label d-flex align-items-end">
-                        Townhomes
-                        <span class="fs-xs text-body-secondary ps-2 ms-auto">346</span>
-                      </label>
-                    </div>
-                  </div>
+                <div class="position-relative">
+                  <i class="fi-navigation position-absolute top-50 start-0 translate-middle-y z-1 ms-3"></i>
+                  <select class="form-select form-icon-start bg-transparent" data-select='{
+                    "classNames": {
+                      "containerInner": ["form-select", "form-icon-start", "bg-transparent"]
+                    }
+                  }' aria-label="Location radius select">
+                    <option value="">Any radius</option>
+                    <option value="5 mi" selected>5 mi</option>
+                    <option value="10 mi">10 mi</option>
+                    <option value="20 mi">20 mi</option>
+                    <option value="30 mi">30 mi</option>
+                    <option value="40 mi">40 mi</option>
+                    <option value="50 mi">50 mi</option>
+                  </select>
                 </div>
+              </div>
+              <div class="position-relative" style="width: 180px">
+                <input type="text" class="form-control form-icon-end" id="date-1" data-datepicker placeholder="Choose date">
+                <i class="fi-calendar position-absolute top-50 end-0 translate-middle-y me-3"></i>
               </div>
 
               <!-- Map offcanvas toggle button visible on screens < 992px wide (lg breakpoint) -->
@@ -605,7 +373,6 @@
 
               <!-- Filters offcanvas toggle button -->
               <div class="position-relative">
-                <span class="badge text-bg-primary rounded-pill position-absolute top-0 start-100 translate-middle mt-1 ms-n1">3</span>
                 <button type="button" class="btn btn-icon btn-dark" data-bs-toggle="offcanvas" data-bs-target="#filters" aria-controls="filters" aria-label="Toogle filters">
                   <i class="fi-sliders fs-base"></i>
                 </button>
@@ -625,11 +392,10 @@
                   "containerInner": ["form-select", "border-0", "rounded-0", "ps-4", "pe-1"]
                 }
               }'>
-              <option value="Price Asc">Price Asc</option>
-              <option value="Price Desc">Price Desc</option>
-              <option value="Updated">Updated</option>
-              <option value="Video">Video</option>
-              <option value="3D Tour">3D Tour</option>
+              <option value="Distance Asc">거리순</option>
+              <option value="Hit Desc">조회순</option>
+              <option value="Recommend Asc">추천순</option>
+              <option value="Updated">업데이트순</option>
               </select>
             </div>
           </div>
@@ -701,24 +467,37 @@
                     <div class="swiper-pagination bottom-0 mb-2" data-bs-theme="light"></div>
                   </div>
                 </div>
-                <div class="card-body p-3">
+                <div class="card-body p-4 pb-3">
                   <div class="h5 mb-2">섭바이크</div>
-                  <h3 class="fs-sm fw-normal text-body mb-2">
-                    <!-- <a class="stretched-link text-body" href="single-entry-ㅇreal-estate.html"> -->
-                      서울 중랑구 망우동 303-14 1층 <br> 02-978-0719
-                    <!-- </a> -->
-                  </h3>
-                  <!-- <div class="h6 fs-sm mb-0">65 sq.m</div> -->
+                  <h3 class="fs-sm fw-normal text-body mb-2">                    
+                      서울 중랑구 용마산로136가길 2 1층<br>02-978-0719                    
+                  </h3>                  
                 </div>
-                <div class="card-footer d-flex gap-2 border-0 bg-transparent pt-0 pb-3 px-3 mt-n1">
-                  <!-- <div class="position-absolute top-0 end-0 "> -->
-                    <!-- <button type="button" class="btn btn-sm btn-icon btn-light bg-light border-0 rounded-circle animate-pulse" aria-label="Add to wishlist">
-                      <i class="fi-heart animate-target fs-sm"></i>
-                    </button> -->
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#bookAppointment" aria-controls="bookAppointment">
-                      점검&정비 예약하기
-                    </button>
-                  <!-- </div> -->
+                <div class="card-footer gap-2 border-0 bg-transparent pt-0 pb-0 px-3 mt-n1">
+                  <div class="row px-2">
+                    <div class="col-4">
+                      <a class="btn btn-outline-secondary mb-3" href="#collapseExample" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        영업시간
+                      </a>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-5 px-4">
+                      <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#bookAppointment" aria-controls="bookAppointment">
+                        점검&정비 예약하기
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row px-2">
+                    <div class="col">
+                      <div class="collapse" id="collapseExample">
+                        <ul class="list-unstyled align-items-start small">
+                          <li>월요일 13:00 ~ 20:00</li>
+                          <li>화,수,목,금,토 10:30 ~ 20:00</li>
+                          <li>일요일 휴무</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </article>
             </div>
@@ -744,19 +523,19 @@
                     <a class="swiper-wrapper" href="single-entry-real-estate.html">
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/real-estate/02.jpg" alt="Image">
+                          <img src="assets/img/listings/bd/bkeland.jpg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/real-estate/02.jpg" alt="Image">
+                          <img src="assets/img/listings/bd/bkeland1.jpg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="ratio d-block" style="--fn-aspect-ratio: calc(248 / 362 * 100%)">
-                          <img src="assets/img/listings/real-estate/02.jpg" alt="Image">
+                          <img src="assets/img/listings/bd/bkelande.jpeg" alt="Image">
                           <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(0,0,0, .11) 100%)"></span>
                         </div>
                       </div>
@@ -782,23 +561,36 @@
                     <div class="swiper-pagination bottom-0 mb-2" data-bs-theme="light"></div>
                   </div>
                 </div>
-                <div class="card-body p-3">
-                  <div class="h5 mb-2">$1,320</div>
-                  <h3 class="fs-sm fw-normal text-body mb-2">
-                    <a class="stretched-link text-body" href="single-entry-real-estate.html">517 82nd St, Brooklyn, NY 11209</a>
-                  </h3>
-                  <div class="h6 fs-sm mb-0">45 sq.m</div>
+                <div class="card-body p-4 pb-3">
+                  <div class="h5 mb-2">바이크랜드</div>
+                  <h3 class="fs-sm fw-normal text-body mb-2">                    
+                      서울시 중랑구 동일로 717<br>02-492-5501                    
+                  </h3>                  
                 </div>
-                <div class="card-footer d-flex gap-2 border-0 bg-transparent pt-0 pb-3 px-3 mt-n1">
-                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
-                    1<i class="fi-bed-single fs-base text-secondary-emphasis"></i>
+                <div class="card-footer gap-2 border-0 bg-transparent pt-0 pb-0 px-3 mt-n1">
+                  <div class="row px-2">
+                    <div class="col-4">
+                      <a class="btn btn-outline-secondary mb-3" href="#collapsebklnd" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapsebklnd">
+                        영업시간
+                      </a>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-5 px-4">
+                      <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#bookAppointment" aria-controls="bookAppointment">
+                        점검&정비 예약하기
+                      </button>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
-                    1<i class="fi-shower fs-base text-secondary-emphasis"></i>
-                  </div>
-                  <div class="d-flex align-items-center fs-sm gap-1 me-1">
-                    0<i class="fi-car-garage fs-base text-secondary-emphasis"></i>
-                  </div>
+                  <div class="row px-2">
+                    <div class="col">
+                      <div class="collapse" id="collapsebklnd">
+                        <ul class="list-unstyled align-items-start small">
+                          <li>월,수,목,금,토,일 09:30 ~ 18:00</li>
+                          <li>화요일 휴무</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                   
                 </div>
               </article>
             </div>
@@ -1530,6 +1322,7 @@
     <script src="assets/vendor/leaflet/dist/leaflet.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
 
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
