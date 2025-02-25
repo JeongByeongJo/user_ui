@@ -71,7 +71,7 @@
                 <a class="nav-link" href="home.html">홈</a>
               </li>
               <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                <a class="nav-link" href="add-property-type.html">자전거 등록하기</a>
+                <a class="nav-link" href="add-bicycle.html">자전거 등록하기</a>
               </li>
               <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
                 <a class="nav-link" href="listings-bikeshop.html">점검 & 정비</a>
@@ -326,19 +326,19 @@
                       <div class="d-flex align-items-center justify-content-center position-relative h-100 cursor-pointer bg-body-tertiary border border-2 border-dotted rounded p-3">
                         <div class="text-center">
                           <i class="fi-plus-circle fs-4 text-secondary-emphasis mb-2"></i>
-                          <div class="hover-effect-underline stretched-link fs-sm fw-medium">Upload photos / videos</div>
+                          <div class="hover-effect-underline stretched-link fs-sm fw-medium">사진 추가하기</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="pt-3 mt-2 mt-md-3">
+                <!-- <div class="pt-3 mt-2 mt-md-3">
                   <label for="link" class="form-label">Link to the video tour</label>
                   <div class="position-relative">
                     <i class="fi-link position-absolute top-50 start-0 translate-middle-y fs-lg ms-3"></i>
                     <input type="url" class="form-control form-control-lg form-icon-start" id="link" placeholder="www.youtube.com/...">
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
             </section>
@@ -464,7 +464,7 @@
                     </select>
                   </div>
                   <div class="col">
-                    <label class="form-label">Car model *</label>
+                    <label class="form-label">자전거 모델 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
@@ -472,22 +472,15 @@
                       "searchEnabled": true
                     }' aria-label="Car model select" required>
                       <option value="">Select model</option>
-                      <option value="A-Class">795</option>
-                      <option value="C-Class">785</option>
-                      <option value="E-Class">765</option>
-                      <option value="S-Class">S-Class</option>
-                      <option value="A205" selected>A205</option>
-                      <option value="GLA">GLA</option>
-                      <option value="GLC">GLC</option>
-                      <option value="GLE">GLE</option>
-                      <option value="GLS">GLS</option>
-                      <option value="AMG GT">AMG GT</option>
+                      <option value="795" selected>795</option>
+                      <option value="785">785</option>
+                      <option value="765">765</option>
                     </select>
                   </div>
                 </div>
                 <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col">
-                    <label class="form-label">Manufacturing year *</label>
+                    <label class="form-label">모델연식 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
@@ -508,81 +501,13 @@
                     </select>
                   </div>
                   <div class="col">
-                    <label for="mileage" class="form-label">Mileage *</label>
-                    <input type="text" class="form-control form-control-lg" id="mileage" placeholder="K miles" required>
+                    <label for="mileage" class="form-label">마일리지 *</label>
+                    <input type="text" class="form-control form-control-lg" id="mileage" placeholder="K meter" required>
                   </div>
-                </div>
-                <!-- <div class="mb-3 mb-md-4">
-                  <label class="form-label">Body type *</label>
-                  <div class="nav nav-pills row row-cols-2 row-cols-sm-3 row-cols-md-5 gap-0 g-3">
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="road" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="road">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/road.JPG" alt="Road">
-                        </span>
-                        Road
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="hardtail" name="body" checked>
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="hardtail">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/hardtail.JPG" alt="Hardtail">
-                        </span>
-                        Hardtail
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="fullsuspension" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="fullsuspension">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/fullsuspension.JPG" alt="Fullsuspension">
-                        </span>
-                        Fullsuspension
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="track" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="track">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/track.JPG" alt="Track">
-                        </span>
-                        Track
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="triathlon" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="triathlon">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/triathlon.JPG" alt="Triathlon,TT">
-                        </span>
-                        Triathlon,TT
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="folding" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="folding">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/folding.JPG" alt="folding">
-                        </span>
-                        Folding,MiniVelo
-                      </label>
-                    </div>
-                    <div class="col">
-                      <input type="radio" class="btn-check" id="bicycle" name="body">
-                      <label class="nav-link flex-column w-100 align-items-center gap-2 rounded p-3" for="bicycle">
-                        <span class="ratio d-block" style="--fn-aspect-ratio: calc(62 / 100 * 100%); max-width: 124px">
-                          <img src="assets/img/add-item/bd/bicycle.JPG" alt="bicycle">
-                        </span>
-                        그 외 자전거
-                      </label>
-                    </div>
-                  </div>
-                </div> -->
+                </div>                
                 <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col">
-                    <label class="form-label">Location *</label>
+                    <label class="form-label">지역-시,도 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
@@ -590,12 +515,12 @@
                       "searchEnabled": true
                     }' aria-label="Location select" required>
                       <option value="">Select location</option>
-                      <option value="New York">New York</option>
-                      <option value="Los Angeles">Los Angeles</option>
-                      <option value="Chicago" selected>Chicago</option>
-                      <option value="Houston">Houston</option>
-                      <option value="Phoenix">Phoenix</option>
-                      <option value="Philadelphia">Philadelphia</option>
+                      <option value="Seoul" selected>서울특별시</option>
+                      <option value="Inchon">인천시</option>
+                      <option value="Pusan">부산시</option>
+                      <option value="Daegu">대구시</option>
+                      <option value="Gwangju">광주시</option>
+                      <option value="Daejeon">대전시</option>
                       <option value="San Antonio">San Antonio</option>
                       <option value="San Diego">San Diego</option>
                       <option value="Dallas">Dallas</option>
@@ -603,26 +528,27 @@
                     </select>
                   </div>
                   <div class="col">
-                    <label class="form-label">Radius</label>
+                    <label class="form-label">지역-구</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
                       }
                     }' aria-label="Radius select">
-                      <option value="">Select radius</option>
-                      <option value="200 mi">200 mi</option>
-                      <option value="150 mi">150 mi</option>
-                      <option value="100 mi">100 mi</option>
-                      <option value="50 mi" selected>50 mi</option>
-                      <option value="25 mi">25 mi</option>
+                      <option value="">Select location</option>
+                      <option value="Seoul">중구</option>
+                      <option value="Inchon">종로구</option>
+                      <option value="Pusan">용산구</option>
+                      <option value="Daegu">강남구</option>
+                      <option value="Gwangju" selected>중랑구</option>
+                      <option value="Daejeon">노원구</option>
                     </select>
                   </div>
                 </div>
                 <div class="bg-body-tertiary rounded p-4">
-                  <h6 class="mb-2">Cars with a verified VIN code sell faster</h6>
-                  <p class="fs-sm">We will check the car for free in the registers of the Ministry of Internal Affairs, the open data portal and dealer databases.</p>
+                  <h6 class="mb-2">자전거의 시리얼넘버를 저장하세요.</h6>
+                  <p class="fs-sm">정품 자전거의 수리, 교환 혜택등을 받으실 수 있습니다.</p>
                   <div class="d-flex gap-2" style="max-width: 354px">
-                    <input type="text" class="form-control" placeholder="VIN code">
+                    <input type="text" class="form-control" placeholder="S/N code">
                     <button type="button" class="btn btn-icon btn-dark" aria-label="Camera">
                       <i class="fi-camera fs-base"></i>
                     </button>
@@ -636,519 +562,130 @@
             <!-- Specifications -->
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
-                <h2 class="h4 mb-3 mb-sm-4">Specifications</h2>
+                <h2 class="h4 mb-3 mb-sm-4">세부 정보</h2>
                 <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col">
-                    <label class="form-label">Drive type *</label>
+                    <label class="form-label">구동계 브랜드 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
                       }
                     }' aria-label="Drive type select" required>
-                      <option value="">Select drive type</option>
-                      <option value="Front-Wheel Drive">Front-Wheel Drive</option>
-                      <option value="Rear-Wheel Drive">Rear-Wheel Drive</option>
-                      <option value="All-Wheel Drive">All-Wheel Drive</option>
-                      <option value="Four-Wheel Drive">Four-Wheel Drive</option>
+                      <option value="">Select brand</option>
+                      <option value="Shimano">Shimano</option>
+                      <option value="Sram">Sram</option>
+                      <option value="Campanolo">Campanolo</option>
+                      <option value="etc">e.t.c</option>
                     </select>
                   </div>
                   <div class="col">
-                    <label class="form-label">Engine *</label>
+                    <label class="form-label">구동계 모델명 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
                       }
                     }' aria-label="Engine select" required>
-                      <option value="">Select engine</option>
-                      <option value="Inline-4">Inline-4</option>
-                      <option value="Inline-6">Inline-6</option>
-                      <option value="6-Cylinder Turbo">6-Cylinder Turbo</option>
-                      <option value="V6">V6</option>
-                      <option value="V8">V8</option>
-                      <option value="V10">V10</option>
-                      <option value="V12">V12</option>
-                      <option value="Electric">Electric</option>
-                      <option value="Hybrid">Hybrid</option>
+                      <option value="">Select Model</option>
+                      <option value="Dura">Dura-Ace</option>
+                      <option value="Ultegra">Ultegra</option>
+                      <option value="105">105</option>
+                      <option value="Tiagra">Tiagra</option>
+                      <option value="XTR">XTR</option>
+                      <option value="XT">XT</option>
+                      <option value="SLX">SLX</option>
+                      <option value="Deore">Deore</option>                      
                     </select>
                   </div>
                   <div class="col">
-                    <label class="form-label">Transmission *</label>
+                    <label class="form-label">브레이크 브랜드 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
                       }
                     }' aria-label="Transmission select" required>
-                      <option value="">Select transmission</option>
-                      <option value="Manual">Manual</option>
-                      <option value="Automatic">Automatic</option>
-                      <option value="CVT">CVT</option>
-                      <option value="Dual-Clutch">Dual-Clutch</option>
-                      <option value="Semi-Automatic">Semi-Automatic</option>
-                      <option value="7-Speed Shiftable Automatic" selected>7-Speed Shiftable Automatic</option>
-                      <option value="8-Speed Automatic">8-Speed Automatic</option>
-                      <option value="9-Speed Automatic">9-Speed Automatic</option>
-                      <option value="10-Speed Automatic">10-Speed Automatic</option>
+                      <option value="">Select brand</option>
+                      <option value="Shimano">Shimano</option>
+                      <option value="Sram">Sram</option>
+                      <option value="Campanolo">Campanolo</option>
+                      <option value="etc">e.t.c</option>
                     </select>
                   </div>
+                  <div class="col pt-3">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" role="switch" id="ex-switch-1">
+                          <label for="ex-switch-1" class="form-check-label">전동 구동계</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" role="switch" id="ex-switch-1">
+                          <label for="ex-switch-1" class="form-check-label">디스크 브레이크</label>
+                        </div>
+                      </div>                      
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" role="switch" id="ex-switch-1">
+                          <label for="ex-switch-1" class="form-check-label">유압식 브레이크</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" role="switch" id="ex-switch-1">
+                          <label for="ex-switch-1" class="form-check-label">풀인터널 케이블</label>
+                        </div>
+                      </div>                      
+                    </div>
+                  </div>
                   <div class="col">
-                    <label class="form-label">Fuel type *</label>
+                    <label class="form-label">휠셋 브랜드 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
                       }
-                    }' aria-label="Fuel select" required>
-                      <option value="">Select fuel type</option>
-                      <option value="Gasoline" selected>Gasoline</option>
-                      <option value="Diesel">Diesel</option>
-                      <option value="Electric">Electric</option>
-                      <option value="Hybrid">Hybrid</option>
-                      <option value="Plug-in Hybrid">Plug-in Hybrid</option>
-                      <option value="Hydrogen">Hydrogen</option>
-                      <option value="Flex Fuel">Flex Fuel</option>
-                      <option value="Natural Gas">Natural Gas</option>
+                    }' aria-label="Transmission select" required>
+                      <option value="">Select brand</option>
+                      <option value="Shimano">Shimano</option>
+                      <option value="Sram">Lightweight</option>
+                      <option value="Campanolo">Campanolo</option>
+                      <option value="etc">e.t.c</option>
                     </select>
                   </div>
                   <div class="col">
-                    <label for="city-mpg" class="form-label">City MPG</label>
-                    <input type="number" class="form-control form-control-lg" id="city-mpg" min="10" placeholder="Miles per gallon">
+                    <label for="exterior-color" class="form-label">휠셋 모델</label>
+                    <input type="text" class="form-control form-control-lg" id="exterior-color">
                   </div>
-                  <div class="col">
-                    <label for="highway-mpg" class="form-label d-flex align-items-center">Highway MPG <i class="fi-info fs-base ms-2" data-bs-toggle="tooltip" title="Measured at a steady pace of 65 mph"></i></label>
-                    <input type="number" class="form-control form-control-lg" id="highway-mpg" min="10" placeholder="Miles per gallon">
-                  </div>
-                  <div class="col">
+                  <!-- <div class="col">
                     <label for="exterior-color" class="form-label">Exterior color</label>
                     <input type="text" class="form-control form-control-lg" id="exterior-color">
                   </div>
                   <div class="col">
                     <label for="interior-color" class="form-label">Interior color</label>
                     <input type="text" class="form-control form-control-lg" id="interior-color">
-                  </div>
+                  </div> -->
                 </div>
                 <label for="description" class="form-label fs-6 fw-semibold">Description *</label>
-                <p class="fs-sm mb-2">Here you can let your imagination run wild and describe the car in the best possible way!</p>
-                <textarea class="form-control form-control-lg" rows="5" id="description" placeholder="Maximum 2000 characters" required></textarea>
+                <p class="fs-sm mb-2">자전거의 멋짐을 추가로 표현해보세요!</p>
+                <textarea class="form-control form-control-lg" rows="5" id="description" placeholder="최대 2000자" required></textarea>
               </div>
               <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
             </section>
 
-
-            <!-- Features -->
-            <section class="position-relative bg-body rounded p-4 mt-4">
-              <div class="position-relative z-1 pb-md-2 px-md-2">
-                <h2 class="h4 mb-1 mb-sm-2">Features</h2>
-                <div class="accordion accordion-alt-icon" id="features">
-
-                  <!-- Exterior -->
-                  <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingExteriror">
-                      <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#exterior" aria-expanded="true" aria-controls="exterior">
-                        <span class="hover-effect-underline stretched-link me-2">Exteriror</span>
-                      </button>
-                    </h3>
-                    <div class="accordion-collapse collapse show" id="exterior" aria-labelledby="headingExteriror" data-bs-parent="#features">
-                      <div class="accordion-body mt-n1">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-3 gx-4">
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="led-headlights" checked>
-                              <label for="led-headlights" class="form-check-label">LED Headlights</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="fog-lights" checked>
-                              <label for="fog-lights" class="form-check-label">Fog Lights</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="heated-mirrors">
-                              <label for="heated-mirrors" class="form-check-label">Heated Mirrors</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="power-mirrors" checked>
-                              <label for="power-mirrors" class="form-check-label">Power Mirrors</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="rain-sensing-wipers">
-                              <label for="rain-sensing-wipers" class="form-check-label">Rain Sensing Wipers</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="rear-spoiler" checked>
-                              <label for="rear-spoiler" class="form-check-label">Rear Spoiler</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="convertible-roof" checked>
-                              <label for="convertible-roof" class="form-check-label">Convertible Roof</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="alloy-wheels">
-                              <label for="alloy-wheels" class="form-check-label">Alloy Wheels</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="keyless-entry" checked>
-                              <label for="keyless-entry" class="form-check-label">Keyless Entry</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="power-windows" checked>
-                              <label for="power-windows" class="form-check-label">Power Windows</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="daytime-running-lights" checked>
-                              <label for="daytime-running-lights" class="form-check-label">Daytime Running Lights</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="tinted-glass">
-                              <label for="tinted-glass" class="form-check-label">Tinted Glass</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="parking-sensors">
-                              <label for="parking-sensors" class="form-check-label">Parking Sensors</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="dual-exhaust">
-                              <label for="dual-exhaust" class="form-check-label">Dual Exhaust</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="power-trunk" checked>
-                              <label for="power-trunk" class="form-check-label">Power Trunk</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Interior -->
-                  <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingInterior">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#interior" aria-expanded="false" aria-controls="interior">
-                        <span class="hover-effect-underline stretched-link me-2">Interior</span>
-                      </button>
-                    </h3>
-                    <div class="accordion-collapse collapse" id="interior" aria-labelledby="headingInterior" data-bs-parent="#features">
-                      <div class="accordion-body mt-n1">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-3 gx-4">
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="ac" checked>
-                              <label for="ac" class="form-check-label">Multi-Zone A/C</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="heated-front" checked>
-                              <label for="heated-front" class="form-check-label">Heated Front Seats</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="steering-audio">
-                              <label for="steering-audio" class="form-check-label">Steering Wheel Audio Controls</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="steering-adjustable" checked>
-                              <label for="steering-adjustable" class="form-check-label">Adjustable Steering Wheel</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="wipers">
-                              <label for="wipers" class="form-check-label">Intermittent Wipers</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="door-locks" checked>
-                              <label for="door-locks" class="form-check-label">Power Door Locks</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="auto-dimming">
-                              <label for="auto-dimming" class="form-check-label">Auto-Dimming Rearview Mirror</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="leather-seats">
-                              <label for="leather-seats" class="form-check-label">Leather Seats</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="bank">
-                              <label for="bank" class="form-check-label">Bank</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="cc">
-                              <label for="cc" class="form-check-label">Climate Control</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="visor-mirror" checked>
-                              <label for="visor-mirror" class="form-check-label">Passenger Illuminated Visor Mirror</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="pass-through">
-                              <label for="pass-through" class="form-check-label">Pass-Through Rear Seat</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="driver-lumbar">
-                              <label for="driver-lumbar" class="form-check-label">Driver Adjustable Lumbar</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="passenger-lumbar">
-                              <label for="passenger-lumbar" class="form-check-label">Passenger Adjustable Lumbar</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="garage-opener" checked>
-                              <label for="garage-opener" class="form-check-label">Universal Garage Door Opener</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Safety -->
-                  <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingSafety">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#safety" aria-expanded="false" aria-controls="safety">
-                        <span class="hover-effect-underline stretched-link me-2">Safety</span>
-                      </button>
-                    </h3>
-                    <div class="accordion-collapse collapse" id="safety" aria-labelledby="headingSafety" data-bs-parent="#features">
-                      <div class="accordion-body mt-n1">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-3 gx-4">
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="airbags" checked>
-                              <label for="airbags" class="form-check-label">Airbags</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="anti-lock-brakes" checked>
-                              <label for="anti-lock-brakes" class="form-check-label">Anti-lock Brakes (ABS)</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="traction-control">
-                              <label for="traction-control" class="form-check-label">Traction Control</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="stability-control" checked>
-                              <label for="stability-control" class="form-check-label">Stability Control</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="rearview-camera" checked>
-                              <label for="rearview-camera" class="form-check-label">Rearview Camera</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="blind-spot-monitor" checked>
-                              <label for="blind-spot-monitor" class="form-check-label">Blind Spot Monitor</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="lane-departure-warning">
-                              <label for="lane-departure-warning" class="form-check-label">Lane Departure Warning</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="forward-collision-warning">
-                              <label for="forward-collision-warning" class="form-check-label">Forward Collision Warning</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="emergency-braking">
-                              <label for="emergency-braking" class="form-check-label">Automatic Emergency Braking</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="adaptive-cruise" checked>
-                              <label for="adaptive-cruise" class="form-check-label">Adaptive Cruise Control</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="child-safety-locks" checked>
-                              <label for="child-safety-locks" class="form-check-label">Child Safety Locks</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="tire-pressure-monitor">
-                              <label for="tire-pressure-monitor" class="form-check-label">Tire Pressure Monitoring System</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="drowsiness-monitor">
-                              <label for="drowsiness-monitor" class="form-check-label">Driver Drowsiness Monitoring</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="night-vision">
-                              <label for="night-vision" class="form-check-label">Night Vision Assist</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-check mb-0">
-                              <input type="checkbox" class="form-check-input" id="pedestrian-detection" checked>
-                              <label for="pedestrian-detection" class="form-check-label">Pedestrian Detection</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
-            </section>
-
-
-            <!-- Price -->
-            <section class="position-relative bg-body rounded p-4 mt-4">
-              <div class="position-relative z-1 pb-md-2 px-md-2">
-                <h2 class="h4 mb-3 mb-sm-4">Price</h2>
-                <label for="price" class="form-label">Price *</label>
-                <div class="position-relative mb-3 mb-md-4" style="max-width: 390px">
-                  <i class="fi-dollar-sign fs-lg position-absolute top-50 start-0 translate-middle-y ms-3"></i>
-                  <input type="number" class="form-control form-control-lg form-icon-start" id="price" min="1000" value="41900" placeholder="Set a fair price" required>
-                </div>
-                <div class="form-check form-switch mb-3 mb-md-4">
-                  <input type="checkbox" class="form-check-input" role="switch" id="negotiated" checked>
-                  <label for="negotiated" class="form-check-label fw-medium">Negotiated price</label>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <div class="form-check mb-0">
-                    <input type="checkbox" class="form-check-input" id="installments" checked>
-                    <label for="installments" class="form-check-label">Payment in installments is possible</label>
-                  </div>
-                  <div class="form-check mb-0">
-                    <input type="checkbox" class="form-check-input" id="exchange">
-                    <label for="exchange" class="form-check-label">Exchange for a car is possible</label>
-                  </div>
-                  <div class="form-check mb-0">
-                    <input type="checkbox" class="form-check-input" id="uncleared">
-                    <label for="uncleared" class="form-check-label">Uncleared car</label>
-                  </div>
-                </div>
-              </div>
-              <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
-            </section>
-
-
-            <!-- Contacts -->
-            <section class="position-relative bg-body rounded p-4 mt-4">
-              <div class="position-relative z-1 pb-md-2 px-md-2">
-                <h2 class="h4 mb-3 mb-sm-4">Contacts</h2>
-                <div class="nav nav-pills flex-wrap gap-3 mb-3 mb-sm-4">
-                  <div>
-                    <input type="radio" class="btn-check" id="private" name="seller" checked>
-                    <label class="nav-link" for="private">
-                      <i class="fi-user fs-base ms-n1 me-2"></i>
-                      Private seller
-                    </label>
-                  </div>
-                  <div>
-                    <input type="radio" class="btn-check" id="dealer" name="seller">
-                    <label class="nav-link" for="dealer">
-                      <i class="fi-briefcase fs-base ms-n1 me-2"></i>
-                      Dealer
-                    </label>
-                  </div>
-                </div>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4">
-                  <div class="col">
-                    <label for="fn" class="form-label">First name *</label>
-                    <input type="text" class="form-control form-control-lg" id="fn" required>
-                  </div>
-                  <div class="col">
-                    <label for="ln" class="form-label">Last name *</label>
-                    <input type="text" class="form-control form-control-lg" id="ln" required>
-                  </div>
-                  <div class="col">
-                    <label for="email" class="form-label">Email *</label>
-                    <input type="email" class="form-control form-control-lg" id="email" required>
-                  </div>
-                  <div class="col">
-                    <label for="phone" class="form-label">Phone number *</label>
-                    <input type="tel" class="form-control form-control-lg" id="phone" data-input-format='{"numericOnly": true, "delimiters": ["(", ")", " ", "-", " "], "blocks": [0, 3, 0, 3, 4]}' placeholder="(___) ___-____" required>
-                  </div>
-                  <div class="col">
-                    <div class="form-check mb-0">
-                      <input type="checkbox" class="form-check-input" id="dealer-ready">
-                      <label for="dealer-ready" class="form-check-label">Ready to cooperate with dealers</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
-            </section>
+            
 
 
             <!-- Action buttons -->
             <section class="d-flex flex-column flex-sm-row justify-content-between gap-3 mt-4">
               <button type="button" class="btn btn-lg btn-outline-secondary bg-body">
                 <i class="fi-eye fs-lg ms-n1 me-2"></i>
-                Detailed preview
+                미리보기
               </button>
               <button type="button" class="btn btn-lg btn-primary">
                 <i class="fi-upload fs-lg ms-n1 me-2"></i>
-                Save and publish
+                저장하기
               </button>
             </section>
           </div>
@@ -1167,7 +704,7 @@
                 <article class="card hover-effect-scale border-0 mb-3">
                   <div class="card-img-top position-relative z-1 overflow-hidden">
                     <div class="d-flex flex-column gap-2 align-items-start position-absolute top-0 start-0 z-1 pt-1 pt-sm-0 ps-1 ps-sm-0 mt-2 mt-sm-3 ms-2 ms-sm-3">
-                      <span class="badge text-bg-warning">Used</span>
+                      <span class="badge text-bg-warning"></span>
                     </div>
                     <div class="ratio hover-effect-target" style="--fn-aspect-ratio: calc(204 / 306 * 100%)">
                       <img src="assets/img/add-item/bd/IMG_4871.JPG" alt="Image">
@@ -1189,30 +726,30 @@
                       </div>
                     </div>
                     <h3 class="h6 mb-2">
-                      <a class="hover-effect-underline stretched-link me-1" href="#!">Mercedes-Benz A205</a>
+                      <a class="hover-effect-underline stretched-link me-1" href="#!">Look 795 Light RS</a>
                       <span class="fs-xs fw-normal text-body-secondary">(2021)</span>
                     </h3>
-                    <div class="h6 mb-0">$41,900</div>
+                    <div class="h6 mb-0">￦7,900,000</div>
                   </div>
                   <div class="card-footer position-relative z-1 bg-transparent border-0 pt-0 px-0 px-lg-4 pb-0 pb-lg-4">
                     <div class="border-top pt-3">
                       <div class="row row-cols-2 g-2 fs-sm">
                         <div class="col d-flex align-items-center gap-2">
                           <i class="fi-map-pin"></i>
-                          Chicago
+                          서울
                         </div>
                         <div class="col d-flex align-items-center gap-2">
                           <i class="fi-tachometer"></i>
-                          ---
+                          2870Km
                         </div>
-                        <div class="col d-flex align-items-center gap-2">
+                        <!-- <div class="col d-flex align-items-center gap-2">
                           <i class="fi-gas-pump"></i>
                           Gasoline
                         </div>
                         <div class="col d-flex align-items-center gap-2">
                           <i class="fi-gearbox"></i>
                           Automatic
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
@@ -1224,7 +761,7 @@
                 <hr class="d-lg-none">
 
                 <!-- Progress -->
-                <div class="position-relative bg-body rounded">
+                <!-- <div class="position-relative bg-body rounded">
                   <div class="position-relative z-1 p-lg-3">
                     <h3 class="h6 mb-1">The quality of content</h3>
                     <div class="fs-sm text-end mb-2">75%</div>
@@ -1235,7 +772,7 @@
                   <div class="d-none d-lg-block">
                     <div class="position-absolute top-0 start-0 w-100 h-100 bg-body-tertiary rounded d-none d-block-dark"></div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </aside>
