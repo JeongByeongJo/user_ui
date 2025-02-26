@@ -44,6 +44,95 @@
   <!-- Body -->
   <body>
 
+    <div class="modal fade" id="reviewForm" data-bs-backdrop="static" tabindex="-1" aria-labelledby="reviewFormLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content needs-validation" novalidate>
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="reviewFormLabel">리뷰를 남겨주세요.</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pb-3 pt-0">
+            <div class="mb-3">
+              <label for="review-name" class="form-label">성함 <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="review-name" required>
+              <div class="invalid-feedback">성함을 입력해주세요!</div>
+              <small class="form-text">리뷰에 사용될 이름입니다.</small>
+            </div>
+            <div class="mb-3">
+              <label for="review-email" class="form-label">이메일 <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="review-email" required>
+              <div class="invalid-feedback">유효한 이메일 주소를 입력해주세요!</div>
+              <small class="form-text">리뷰작성 외에 이메일주소를 사용하지 않습니다.</small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">별점 <span class="text-danger">*</span></label>
+              <select class="form-select" data-select='{
+                "placeholderValue": "Select rating",
+                "choices": [
+                  {
+                    "value": "",
+                    "label": "Select rating",
+                    "placeholder": true
+                  },
+                  {
+                    "value": "1",
+                    "label": "<span class=\"visually-hidden\">1 star</span>",
+                    "customProperties": {
+                      "icon": "<span class=\"d-flex gap-1 py-1\"><i class=\"fi-star-filled text-warning\"></i></span>",
+                      "selected": "1 star"
+                    }
+                  },
+                  {
+                    "value": "2",
+                    "label": "<span class=\"visually-hidden\">2 stars</span>",
+                    "customProperties": {
+                      "icon": "<span class=\"d-flex gap-1 py-1\"><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i></span>",
+                      "selected": "2 stars"
+                    }
+                  },
+                  {
+                    "value": "3",
+                    "label": "<span class=\"visually-hidden\">3 stars</span>",
+                    "customProperties": {
+                      "icon": "<span class=\"d-flex gap-1 py-1\"><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i></span>",
+                      "selected": "3 stars"
+                    }
+                  },
+                  {
+                    "value": "4",
+                    "label": "<span class=\"visually-hidden\">4 stars</span>",
+                    "customProperties": {
+                      "icon": "<span class=\"d-flex gap-1 py-1\"><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"ci-star-filled text-warning\"></i></span>",
+                      "selected": "4 stars"
+                    }
+                  },
+                  {
+                    "value": "5",
+                    "label": "<span class=\"visually-hidden\">5 stars</span>",
+                    "customProperties": {
+                      "icon": "<span class=\"d-flex gap-1 py-1\"><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"fi-star-filled text-warning\"></i><i class=\"ci-star-filled text-warning\"></i></span>",
+                      "selected": "5 stars"
+                    }
+                  }
+                ]
+              }' data-select-template="true" aria-label="Rating select" required></select>
+              <div class="invalid-feedback">별점을 메겨주세요!</div>
+            </div>
+            <div>
+              <label class="form-label" for="review-text">리뷰 <span class="text-danger">*</span></label>
+              <textarea class="form-control" rows="4" id="review-text" required></textarea>
+              <div class="invalid-feedback">리뷰를 적어주세요!</div>
+              <!-- <small class="form-text">Your review must be at least 50 characters.</small> -->
+            </div>
+          </div>
+          <div class="modal-footer flex-nowrap gap-3 border-0 px-4">
+            <button type="reset" class="btn btn-secondary w-100 m-0" data-bs-dismiss="modal">취소</button>
+            <button type="submit" class="btn btn-primary w-100 m-0">리뷰 작성</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Navigation bar (Page header) -->
     <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
       <div class="container">
@@ -296,51 +385,6 @@
               </div>
             </div>
 
-            <!-- Info message (Alert) -->
-            <!-- <div class="alert d-flex alert-secondary fs-sm m-0" role="alert">
-              <i class="fi-info fs-lg pe-1 me-2"></i>
-              <div>We estimate this home will sell faster than 94% nearby.</div>
-            </div> -->
-
-            <!-- About -->
-            <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">About</h2>
-            <p class="fs-sm">It offers a comfortable living area leading to a formal dining room, gorgeous hardwood floors throughout, spacious renovated Island kitchen with granite countertops and stainless steel appliances. Additionally, revel in the convenience of a master bedroom featuring a built-in dressing room, complemented by a private bath and shower for added comfort. This inviting apartment is conveniently located close to transportation hubs, ensuring easy access to the city's heartbeat.</p>
-
-            <!-- General info -->
-            <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">General information</h2>
-            <table class="table table-borderless w-auto fs-sm">
-              <tbody>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Property type</th>
-                  <td class="text-body py-2">Apartment</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Year built</th>
-                  <td class="text-body py-2">2023</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Living area</th>
-                  <td class="text-body py-2">42 sq.m</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Floor</th>
-                  <td class="text-body py-2">3</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Total rooms</th>
-                  <td class="text-body py-2">2</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Bedrooms</th>
-                  <td class="text-body py-2">1</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="py-2 ps-0 pe-3">Bathrooms</th>
-                  <td class="text-body py-2">1</td>
-                </tr>
-              </tbody>
-            </table>
-
             <!-- Amenities -->
             <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">편의시설</h2>
             <div class="row row-cols-2 row-cols-sm-3 fs-sm gy-3">
@@ -381,63 +425,262 @@
                 Pets allowed
               </div>
             </div>
-
-            <!-- Transportation -->
-            <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">Transportation</h2>
-            <div class="row row-cols-2 row-cols-sm-3 fs-sm gy-3">
-              <div class="col d-flex align-items-center">
-                <i class="fi-footprints fs-lg me-2"></i>
-                <span><span class="fw-semibold">73/100</span> Walkable</span>
-              </div>
-              <div class="col d-flex align-items-center">
-                <i class="fi-car fs-lg me-2"></i>
-                <span><span class="fw-semibold">97%</span> Driveable</span>
-              </div>
-              <div class="col d-flex align-items-center">
-                <i class="fi-bicycle fs-lg me-2"></i>
-                <span><span class="fw-semibold">59/100%</span> Bikeable</span>
-              </div>
-            </div>
-
+            
             <!-- Location -->
-            <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">Location</h2>
-            <div class="overflow-x-auto pb-3 mb-2">
-              <ul class="nav nav-pills nav-justified flex-nowrap gap-2">
-                <li class="nav-item me-1">
-                  <a class="nav-link text-nowrap active" aria-current="page" href="#!">
-                    <i class="fi-tram fs-base me-2 ms-n1"></i>
-                    Transport
-                  </a>
-                </li>
-                <li class="nav-item me-1">
-                  <a class="nav-link text-nowrap" href="#!">
-                    <i class="fi-graduation-cap fs-base me-2 ms-n1"></i>
-                    Education
-                  </a>
-                </li>
-                <li class="nav-item me-1">
-                  <a class="nav-link text-nowrap" href="#!">
-                    <i class="fi-shopping-bag fs-base me-2 ms-n1"></i>
-                    Shopping
-                  </a>
-                </li>
-                <li class="nav-item me-1">
-                  <a class="nav-link text-nowrap" href="#!">
-                    <i class="fi-bowl-food fs-base me-2 ms-n1"></i>
-                    Food
-                  </a>
-                </li>
-                <li class="nav-item me-1">
-                  <a class="nav-link text-nowrap" href="#!">
-                    <i class="fi-tree fs-base me-2 ms-n1"></i>
-                    Parks
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <h2 class="h5 pt-4 pt-sm-5 mt-3 mt-sm-0">위치</h2>            
 
             <!-- Google map -->
             <iframe class="border rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.3724100313693!2d-73.82417211551919!3d42.62335692577899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dde016efd1fe73%3A0x6861561b35064fe9!2sGlendale%20Ave!5e0!3m2!1sen!2suk!4v1726842151281!5m2!1sen!2suk" width="600" height="350" style="border: 0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+
+            <div class="position-relative p-4 mt-4" id="reviews" style="scroll-margin-top: 98px">
+              <div class="position-relative z-1 p-xl-2">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                  <h2 class="h4 mb-0">리 뷰</h2>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#reviewForm">
+                    <i class="fi-edit-3 fs-base ms-n1 me-2"></i>
+                    리뷰 작성하기
+                  </button>
+                </div>
+
+                <!-- Rating breakdown -->
+                <div class="row g-4 pb-3 mb-3">
+                  <div class="col-sm-5 col-md-3 col-lg-4">
+                    <div class="vstack h-100 position-relative">
+                      <div class="d-flex flex-column align-items-center justify-content-center h-100 position-relative z-1 p-4">
+                        <div class="h1 pb-2 mb-1">4.5</div>
+                        <div class="hstack justify-content-center gap-1 fs-sm mb-2">
+                          <i class="fi-star-filled text-warning"></i>
+                          <i class="fi-star-filled text-warning"></i>
+                          <i class="fi-star-filled text-warning"></i>
+                          <i class="fi-star-filled text-warning"></i>
+                          <i class="fi-star-half text-warning"></i>
+                        </div>
+                        <div class="fs-sm">176 리뷰들</div>
+                      </div>
+                      <span class="position-absolute top-0 start-0 w-100 h-100 bg-body-tertiary rounded d-none-dark"></span>
+                      <span class="position-absolute top-0 start-0 w-100 h-100 bg-body-secondary rounded opacity-50 d-none d-block-dark"></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-7 col-md-9 col-lg-8">
+                    <div class="vstack gap-3">
+                      <div class="hstack gap-2">
+                        <div class="hstack fs-sm gap-1">
+                          5<i class="fi-star-filled text-warning"></i>
+                        </div>
+                        <div class="progress w-100" role="progressbar" aria-label="Five stars" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+                          <div class="progress-bar bg-warning rounded-pill" style="width: 65%"></div>
+                        </div>
+                        <div class="fs-sm text-nowrap text-end" style="width: 40px;">128</div>
+                      </div>
+                      <div class="hstack gap-2">
+                        <div class="hstack fs-sm gap-1">
+                          4<i class="fi-star-filled text-warning"></i>
+                        </div>
+                        <div class="progress w-100" role="progressbar" aria-label="Four stars" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+                          <div class="progress-bar bg-warning rounded-pill" style="width: 21%"></div>
+                        </div>
+                        <div class="fs-sm text-nowrap text-end" style="width: 40px;">27</div>
+                      </div>
+                      <div class="hstack gap-2">
+                        <div class="hstack fs-sm gap-1">
+                          3<i class="fi-star-filled text-warning"></i>
+                        </div>
+                        <div class="progress w-100" role="progressbar" aria-label="Three stars" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+                          <div class="progress-bar bg-warning rounded-pill" style="width: 10%"></div>
+                        </div>
+                        <div class="fs-sm text-nowrap text-end" style="width: 40px;">13</div>
+                      </div>
+                      <div class="hstack gap-2">
+                        <div class="hstack fs-sm gap-1">
+                          2<i class="fi-star-filled text-warning"></i>
+                        </div>
+                        <div class="progress w-100" role="progressbar" aria-label="Two stars" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+                          <div class="progress-bar bg-warning rounded-pill" style="width: 5%"></div>
+                        </div>
+                        <div class="fs-sm text-nowrap text-end" style="width: 40px;">6</div>
+                      </div>
+                      <div class="hstack gap-2">
+                        <div class="hstack fs-sm gap-1">
+                          1<i class="fi-star-filled text-warning"></i>
+                        </div>
+                        <div class="progress w-100" role="progressbar" aria-label="One star" aria-valuenow="2.6" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+                          <div class="progress-bar bg-warning rounded-pill" style="width: 2.6%"></div>
+                        </div>
+                        <div class="fs-sm text-nowrap text-end" style="width: 40px;">2</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reviews -->
+                <div class="vstack gap-4">
+
+                  <!-- Rreview -->
+                  <div class="vstack gap-2 mb-sm-2">
+                    <div class="d-flex align-items-center gap-3 mb-1">
+                      <h6 class="mb-0">Randy W.</h6>
+                      <span class="fs-xs text-body-secondary">November 19, 2024</span>
+                    </div>
+                    <div class="d-flex gap-1 fs-sm mb-1">
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                    </div>
+                    <p class="fs-sm mb-1">Dr. Michael Johnston is truly a life-saver. His expertise and attention to detail are unmatched. He took the time to explain everything clearly and made sure I felt comfortable every step of the way. Thanks to him, my heart health is now better than ever. I highly recommend him!</p>
+                    <div class="nav align-items-center">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 me-n1">
+                        <i class="fi-thumbs-up fs-base animate-target me-1"></i>
+                        6
+                      </button>
+                      <hr class="vr my-2 mx-3">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 ms-n1">
+                        <i class="fi-thumbs-down fs-base animate-target me-1"></i>
+                        0
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Rreview -->
+                  <div class="vstack gap-2 mb-sm-2">
+                    <div class="d-flex align-items-center gap-3 mb-1">
+                      <h6 class="mb-0">Lora Palmer</h6>
+                      <span class="fs-xs text-body-secondary">November 10, 2024</span>
+                    </div>
+                    <div class="d-flex gap-1 fs-sm mb-1">
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                    </div>
+                    <p class="fs-sm mb-1">From the first consultation, Dr. Johnston showed exceptional care and professionalism. His thorough approach to diagnosing my heart condition was impressive, and his treatment plan has worked wonders. I feel fortunate to have found such a knowledgeable and compassionate cardiologist.</p>
+                    <div class="nav align-items-center">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 me-n1">
+                        <i class="fi-thumbs-up fs-base animate-target me-1"></i>
+                        13
+                      </button>
+                      <hr class="vr my-2 mx-3">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 ms-n1">
+                        <i class="fi-thumbs-down fs-base animate-target me-1"></i>
+                        2
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Rreview -->
+                  <div class="vstack gap-2 mb-sm-2">
+                    <div class="d-flex align-items-center gap-3 mb-1">
+                      <h6 class="mb-0">Melissa Smith</h6>
+                      <span class="fs-xs text-body-secondary">November 5, 2024</span>
+                    </div>
+                    <div class="d-flex gap-1 fs-sm mb-1">
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                    </div>
+                    <p class="fs-sm mb-1">Dr. Johnston was incredibly attentive and reassuring during a very stressful time for me. He made complex medical concepts easy to understand and guided me through the entire process. His expertise gave me confidence, and my heart is now in great shape. Five stars for sure!</p>
+                    <div class="nav align-items-center">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 me-n1">
+                        <i class="fi-thumbs-up fs-base animate-target me-1"></i>
+                        8
+                      </button>
+                      <hr class="vr my-2 mx-3">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 ms-n1">
+                        <i class="fi-thumbs-down fs-base animate-target me-1"></i>
+                        0
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Rreview -->
+                  <div class="vstack gap-2 mb-sm-2">
+                    <div class="d-flex align-items-center gap-3 mb-1">
+                      <h6 class="mb-0">Alice Cooper</h6>
+                      <span class="fs-xs text-body-secondary">October 23, 2024</span>
+                    </div>
+                    <div class="d-flex gap-1 fs-sm mb-1">
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                    </div>
+                    <p class="fs-sm mb-1">I can't say enough good things about Dr. Johnston. His calm demeanor, vast knowledge, and caring nature set him apart. He listens carefully to all concerns and tailors treatments to each patient's needs. I'm grateful for the care I've received and highly recommend him to anyone seeking a top-notch cardiologist.</p>
+                    <div class="nav align-items-center">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 me-n1">
+                        <i class="fi-thumbs-up fs-base animate-target me-1"></i>
+                        27
+                      </button>
+                      <hr class="vr my-2 mx-3">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 ms-n1">
+                        <i class="fi-thumbs-down fs-base animate-target me-1"></i>
+                        3
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Rreview -->
+                  <div class="vstack gap-2 mb-sm-2">
+                    <div class="d-flex align-items-center gap-3 mb-1">
+                      <h6 class="mb-0">Natalia D.</h6>
+                      <span class="fs-xs text-body-secondary">October 7, 2024</span>
+                    </div>
+                    <div class="d-flex gap-1 fs-sm mb-1">
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star-filled text-warning"></i>
+                      <i class="fi-star text-warning"></i>
+                    </div>
+                    <p class="fs-sm mb-1">Dr. Johnston is an excellent cardiologist and clearly knows his field well. My treatment has been effective, and I feel much healthier. The only reason for 4 stars is that the wait time for my appointment was longer than expected, but once I saw him, the care was outstanding.</p>
+                    <div class="nav align-items-center">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 me-n1">
+                        <i class="fi-thumbs-up fs-base animate-target me-1"></i>
+                        15
+                      </button>
+                      <hr class="vr my-2 mx-3">
+                      <button type="button" class="nav-link text-body-secondary animate-scale px-0 ms-n1">
+                        <i class="fi-thumbs-down fs-base animate-target me-1"></i>
+                        0
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Pagination -->
+                  <nav class="pt-1 pt-sm-2 pb-2" aria-label="Reviews pagination">
+                    <ul class="pagination">
+                      <li class="page-item active" aria-current="page">
+                        <span class="page-link">
+                          1
+                          <span class="visually-hidden">(current)</span>
+                        </span>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#!">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#!">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#!">4</a>
+                      </li>
+                      <li class="page-item">
+                        <span class="page-link pe-none">...</span>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#!">36</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-white rounded shadow d-none-dark"></span>
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-body-tertiary rounded d-none d-block-dark"></span>
+            </div>
 
             <!-- Meta + Sharing and wishlist buttons -->
             <div class="d-flex align-items-center justify-content-between gap-3 pt-4">
