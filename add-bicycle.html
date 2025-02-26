@@ -190,25 +190,25 @@
               <li>
                 <a class="dropdown-item" href="account-profile.html">
                   <i class="fi-user opacity-75 me-2"></i>
-                  My profile
+                  내 정보
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="account-listings.html">
                   <i class="fi-layers opacity-75 me-2"></i>
-                  My listings
+                  내 자전거
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="account-reviews.html">
                   <i class="fi-star opacity-75 me-2"></i>
-                  Reviews
+                  내가 작성한 리뷰
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="account-favorites.html">
                   <i class="fi-heart opacity-75 me-2"></i>
-                  Favorites
+                  즐겨찾기
                 </a>
               </li>
               <li>
@@ -220,14 +220,14 @@
               <li>
                 <a class="dropdown-item" href="account-settings.html">
                   <i class="fi-settings opacity-75 me-2"></i>
-                  Account settings
+                  계정설정
                 </a>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li>
                 <a class="dropdown-item" href="account-signin.html">
                   <i class="fi-log-out opacity-75 me-2"></i>
-                  Sign out
+                  로그아웃
                 </a>
               </li>
             </ul>
@@ -464,7 +464,7 @@
                     </select>
                   </div>
                   <div class="col">
-                    <label class="form-label">자전거 모델 *</label>
+                    <label class="form-label">자전거 모델명 *</label>
                     <select class="form-select form-select-lg" data-select='{
                       "classNames": {
                         "containerInner": ["form-select", "form-select-lg"]
@@ -545,13 +545,31 @@
                   </div>
                 </div>
                 <div class="bg-body-tertiary rounded p-4">
-                  <h6 class="mb-2">자전거의 시리얼넘버를 저장하세요.</h6>
-                  <p class="fs-sm">정품 자전거의 수리, 교환 혜택등을 받으실 수 있습니다.</p>
-                  <div class="d-flex gap-2" style="max-width: 354px">
-                    <input type="text" class="form-control" placeholder="S/N code">
-                    <button type="button" class="btn btn-icon btn-dark" aria-label="Camera">
-                      <i class="fi-camera fs-base"></i>
-                    </button>
+                  <div class="row">
+                    <div class="col">
+                      <h6 class="mb-2">자전거의 이름(별명)을 저장해주세요.</h6>
+                      <div class="form-check form-switch pt">
+                        <input type="checkbox" class="form-check-input" role="switch" id="ex-switch-1">
+                        <label for="ex-switch-1" class="form-check-label">이름(별명) 사용하기</label>
+                      </div>
+                      <div class="d-flex gap-2" style="max-width: 354px">
+                        <input type="text" class="form-control" placeholder="이름(별명) 입력">
+                        <button type="button" class="btn btn-icon btn-dark" aria-label="Camera">
+                          <i class="fi-camera fs-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h6 class="mb-2">자전거의 시리얼넘버를 저장하세요.</h6>
+                      <p class="fs-sm">정품 자전거의 수리, 교환 혜택등을 받으실 수 있습니다.</p>
+                      <div class="d-flex gap-2" style="max-width: 354px">
+                        <input type="text" class="form-control" placeholder="S/N code">
+                        <button type="button" class="btn btn-icon btn-dark" aria-label="Camera">
+                          <i class="fi-camera fs-base"></i>
+                        </button>
+                      </div>
+                      
+                    </div>
                   </div>
                 </div>
               </div>
@@ -729,8 +747,8 @@
                       <a class="hover-effect-underline stretched-link me-1" href="#!">Look 795 Light RS</a>
                       <span class="fs-xs fw-normal text-body-secondary">(2021)</span>
                     </h3>
-                    <div class="h6 mb-0">Campanolo SuperRecord</div>
-                    <div class="h6 mb-0">Campanolo Bora Ultra 50</div>
+                    <div class="h6 mb-0 opacity-75">Campanolo SuperRecord</div>
+                    <div class="h6 mb-0 opacity-75">Campanolo Bora Ultra 50</div>
                   </div>
                   <div class="card-footer position-relative z-1 bg-transparent border-0 pt-0 px-0 px-lg-4 pb-0 pb-lg-4">
                     <div class="border-top pt-3">
