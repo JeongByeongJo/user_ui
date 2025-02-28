@@ -272,16 +272,57 @@
           </div>
 
           <!-- Account button -->
-          <a class="btn btn-outline-secondary animate-slide-end me-2" href="account-signin.html" aria-label="Sign in to account">
-            <i class="fi-log-in fs-base animate-target mx-n2 me-xl-2"></i>
-            <span class="d-none d-xl-inline">로그인</span>
-          </a>
-
-          <!-- Add property button  -->
-          <a class="btn btn-primary animate-shake" href="account-signup.html">
-            <i class="fi-user fs-base animate-target ms-n1 me-1 me-sm-2"></i>
-            회원가입
-          </a>
+          <div class="dropdown">
+            <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="My account">
+              <i class="fi-user animate-target"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-spacer: .5rem">
+              <li><span class="h6 dropdown-header">Michael Williams</span></li>
+              <li>
+                <a class="dropdown-item" href="account-profile.html">
+                  <i class="fi-user opacity-75 me-2"></i>
+                  내 정보
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-listings.html">
+                  <i class="fi-layers opacity-75 me-2"></i>
+                  내 자전거
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-reviews.html">
+                  <i class="fi-star opacity-75 me-2"></i>
+                  내가 작성한 리뷰
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-favorites.html">
+                  <i class="fi-heart opacity-75 me-2"></i>
+                  즐겨찾기
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-payment.html">
+                  <i class="fi-credit-card opacity-75 me-2"></i>
+                  Payment details
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-settings.html">
+                  <i class="fi-settings opacity-75 me-2"></i>
+                  계정설정
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="account-signin.html">
+                  <i class="fi-log-out opacity-75 me-2"></i>
+                  로그아웃
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -821,149 +862,25 @@
             </div>
           </aside>
         </div>
-        <!-- <div class="modal fade" id="modalId" tabindex="-1" role="dialog">
+        <div class="modal fade" id="modalId" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">비회원 예약하기</h5>
+                <h5 class="modal-title">예약하기</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <p>Modal body content goes here.</p>
+                <label class="form-label fs-base">점검 & 정비 자전거 선택</label>
+                  <select class="form-select form-select-lg" data-select multiple aria-label="bicycle select">
+                    <option value=""></option>
+                    <option value="bicycle1">자전거 1</option>
+                    <option value="bicycle2">자전거 2</option>                    
+                  </select>
               </div>
               <div class="modal-footer flex-column flex-sm-row align-items-stretch">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 <button type="button" class="btn btn-primary">예약하기</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Custom modal markup with tabs, forms and cover image -->
-        <div class="modal fade" id="modalId" tabindex="-1" role="dialog">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content row row-cols-1 row-cols-lg-2 flex-row g-0 overflow-hidden">
-
-              <!-- Cover image -->
-              <div class="col order-lg-2">
-                <div class="position-relative d-flex align-items-end h-100 bg-info-subtle pt-4 px-4 px-sm-5 px-lg-0">
-                  <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <div class="ratio" style="--fn-aspect-ratio: calc(1030 / 1032 * 100%)">
-                    <img src="assets/img/account/account-cover.png" alt="Girl">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col d-flex flex-column order-lg-1">
-
-                <!-- Modal header: Nav tabs -->
-                <div class="modal-header d-block border-0 pt-sm-5 px-sm-5 pb-2">
-                  <ul class="nav nav-tabs mt-sm-n2" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link text-nowrap active" data-bs-toggle="tab" data-bs-target="#signin" role="tab" aria-controls="signin" aria-selected="true">
-                        <i class="fi-log-in fs-base opacity-75 ms-n1 me-2"></i>
-                        Sign in
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link text-nowrap" data-bs-toggle="tab" data-bs-target="#signup" role="tab" aria-controls="signup" aria-selected="false">
-                        <i class="fi-user fs-base opacity-75 ms-n1 me-2"></i>
-                        Sign up
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body tab-content px-sm-5 pb-sm-5">
-
-                  <!-- Tab with sign in form -->
-                  <div class="tab-pane fade show active" id="signin" role="tabpanel">
-                    <h2 class="h5 mb-4">로 그 인</h2>
-                    <form class="needs-validation" novalidate>
-                      <div class="position-relative mb-4">
-                        <label for="email" class="form-label">이메일 | Email</label>
-                        <input type="email" class="form-control form-control-lg" id="email" placeholder="이메일 | Email" required>
-                        <div class="invalid-tooltip bg-transparent py-0">유효한 이메일 계정을 입력해주세요!</div>
-                      </div>
-                      <div class="position-relative mb-4">
-                        <label for="password" class="form-label">비밀번호 | Password</label>
-                        <div class="password-toggle">
-                          <input type="password" class="form-control form-control-lg" id="password" minlength="8" placeholder="비밀번호 | Password" required>
-                          <div class="invalid-tooltip bg-transparent py-0">비밀번호가 정확하지 않습니다!</div>
-                          <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
-                            <input type="checkbox" class="btn-check">
-                          </label>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div class="form-check me-2">
-                          <input type="checkbox" class="form-check-input" id="remember-30">
-                          <label for="remember-30" class="form-check-label">30일간 기억하기</label>
-                        </div>
-                        <div class="nav">
-                          <a class="nav-link animate-underline p-0" href="account-password-recovery.html">
-                            <span class="animate-target">비밀번호 찾기</span>
-                          </a>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn btn-lg btn-primary w-100">로 그 인</button>
-                    </form>
-                  </div>
-
-                  <!-- Tab with sign up form -->
-                  <div class="tab-pane fade" id="signup" role="tabpanel">
-                    <h2 class="h5">회원가입</h2>
-                    <form class="needs-validation" novalidate>
-                      <div class="position-relative mb-4">
-                        <label for="text-input" class="form-label">성 명 | Full Name<span style="color: red;"> *</span></label>
-                        <input type="text" class="form-control form-control-lg" id="text-input" minlength="2" placeholder="이름을 적어주세요." required>
-                        <div class="invalid-tooltip bg-transparent py-0">이름을 적어주세요.</div>
-                      </div>
-                      <div class="position-relative mb-4">
-                        <label for="register-email" class="form-label">이메일 | Email<span style="color: red;"> *</span></label>
-                        <input type="email" class="form-control form-control-lg" id="register-email" placeholder="이메일 주소" required>
-                        <div class="invalid-tooltip bg-transparent py-0">유효한 이메일주소를 입력해주세요.</div>
-                      </div>
-                      <div class="position-relative mb-4">
-                        <label for="register-password" class="form-label">비밀번호 | Password<span style="color: red;"> *</span></label>
-                        <div class="password-toggle">
-                          <input type="password" class="form-control form-control-lg" id="register-password" minlength="8" placeholder="최소 8자리 이상의 비밀번호를 입력해주세요." required>
-                          <div class="invalid-tooltip bg-transparent py-0">8자리 이상의 비밀번호를 만들어주세요.</div>
-                          <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
-                            <input type="checkbox" class="btn-check">
-                          </label>
-                        </div>
-                      </div>
-                      <div class="form-check form-check-inline mb-4">
-                        <input type="radio" class="form-check-input" id="ex-radio-5" name="radio-inline">
-                        <label for="ex-radio-5" class="form-check-label">남 성</label>
-                      </div>
-                      <div class="form-check form-check-inline mb-4">
-                        <input type="radio" class="form-check-input" id="ex-radio-6" name="radio-inline">
-                        <label for="ex-radio-6" class="form-check-label">여 성</label>
-                      </div><br>
-                      <label for="date-1" class="form-label">생년월일 | Date of birth</label>
-                      <div class="position-relative mb-4">
-                        <input type="text" class="form-control form-icon-end" id="date-1" data-datepicker placeholder="Choose date">
-                        <i class="fi-calendar position-absolute top-50 end-0 translate-middle-y me-3"></i>
-                      </div>
-                      <div class="d-flex flex-column gap-2 mb-4">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="save-pass">
-                          <label for="save-pass" class="form-check-label">비밀번호 저장하기</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="privacy" required>
-                          <label for="privacy" class="form-check-label"><a class="text-dark-emphasis" href="#!">개인정보 정책</a>을 읽고 동의합니다.</label>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn btn-lg btn-primary w-100">
-                        계정 만들기
-                        <i class="fi-chevron-right fs-lg ms-1 me-n1"></i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

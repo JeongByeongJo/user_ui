@@ -306,16 +306,57 @@
           </div>
 
           <!-- Account button -->
-          <a class="btn btn-outline-secondary animate-slide-end me-2" href="account-signin.html" aria-label="Sign in to account">
-            <i class="fi-log-in fs-base animate-target mx-n2 me-xl-2"></i>
-            <span class="d-none d-xl-inline">로그인</span>
-          </a>
-
-          <!-- Add property button  -->
-          <a class="btn btn-primary animate-shake" href="account-signup.html">
-            <i class="fi-user fs-base animate-target ms-n1 me-1 me-sm-2"></i>
-            회원가입
-          </a>
+          <div class="dropdown">
+            <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="My account">
+              <i class="fi-user animate-target"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-spacer: .5rem">
+              <li><span class="h6 dropdown-header">Michael Williams</span></li>
+              <li>
+                <a class="dropdown-item" href="account-profile.html">
+                  <i class="fi-user opacity-75 me-2"></i>
+                  내 정보
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-listings.html">
+                  <i class="fi-layers opacity-75 me-2"></i>
+                  내 자전거
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-reviews.html">
+                  <i class="fi-star opacity-75 me-2"></i>
+                  내가 작성한 리뷰
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-favorites.html">
+                  <i class="fi-heart opacity-75 me-2"></i>
+                  즐겨찾기
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-payment.html">
+                  <i class="fi-credit-card opacity-75 me-2"></i>
+                  Payment details
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="account-settings.html">
+                  <i class="fi-settings opacity-75 me-2"></i>
+                  계정설정
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="account-signin.html">
+                  <i class="fi-log-out opacity-75 me-2"></i>
+                  로그아웃
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
