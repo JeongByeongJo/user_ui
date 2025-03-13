@@ -466,35 +466,35 @@
                 <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
                   <i class="fi-check-circle fs-lg text-info"></i>
                 </div>
-                <a class="hover-effect-underline stretched-link fs-sm fw-semibold text-white text-decoration-none" href="add-contractor-location.html">Business location</a>
+                <a class="hover-effect-underline stretched-link fs-sm fw-semibold text-white text-decoration-none" href="add-contractor-location.html">매장 위치</a>
               </div>
               <hr class="w-100 text-white opacity-25 my-0 mx-2">
               <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
                 <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
-                  <i class="fi-swatches fs-lg text-info"></i>
+                  <i class="fi-tool fs-lg text-info"></i>
                 </div>
-                <div class="fs-sm fw-semibold text-white">Choose services</div>
+                <div class="fs-sm fw-semibold text-white">점검,정비 범위</div>
               </div>
               <hr class="w-100 text-white opacity-25 my-0 mx-2">
               <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
                 <div class="d-flex align-items-center justify-content-center border border-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
                   <i class="fi-user-check fs-lg text-white"></i>
                 </div>
-                <div class="fs-sm fw-semibold text-white">Profile details</div>
+                <div class="fs-sm fw-semibold text-white">상세 소개</div>
               </div>
               <hr class="w-100 text-white opacity-25 my-0 mx-2">
               <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
                 <div class="d-flex align-items-center justify-content-center border border-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
                   <i class="fi-clock fs-lg text-white"></i>
                 </div>
-                <div class="fs-sm fw-semibold text-white">Price and hours</div>
+                <div class="fs-sm fw-semibold text-white">영업 시간</div>
               </div>
               <hr class="w-100 text-white opacity-25 my-0 mx-2">
               <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
                 <div class="d-flex align-items-center justify-content-center border border-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
                   <i class="fi-grid fs-lg text-white"></i>
                 </div>
-                <div class="fs-sm fw-semibold text-white">Create first project</div>
+                <div class="fs-sm fw-semibold text-white">사진 등록</div>
               </div>
             </div>
           </div>
@@ -508,60 +508,102 @@
 
           <!-- Inputs -->
           <div class="col-lg-7">
-            <h1 class="h3 pb-sm-1 pb-md-2">What services do you provide?</h1>
-            <h2 class="h6 pb-1 mb-2">Categories *</h2>
+            <h1 class="h3 pb-sm-1 pb-md-2">점검, 정비 가능 범위는 어떻게 되시나요?</h1>
+            <h2 class="h6 pb-1 mb-2">점검, 정비 가능 카테고리 *</h2>
             <select class="form-select form-select-lg" data-select='{
               "classNames": {
                 "containerInner": ["form-select", "form-select-lg"]
               }
             }' multiple aria-label="Select categories">
-              <option value="">Select categories</option>
-              <option value="Roofing" selected>Roofing</option>
-              <option value="Interior designers" selected>Interior design</option>
-              <option value="Flooring" selected>Flooring</option>
-              <option value="Carpentry">Carpentry</option>
-              <option value="Plumbing">Plumbing</option>
-              <option value="Paiting">Paiting</option>
-              <option value="Electrician">Electrician</option>
-              <option value="Cleaning">Cleaning</option>
-              <option value="Pest control">Pest control</option>
-              <option value="Landscaping">Landscaping</option>
+            <option value=""></option>
+            <option value="Drivetrain">구동계</option>
+            <option value="Brakes">브레이크</option>
+            <option value="Shocks">샥</option>
+            <option value="Wheelset">휠셋</option>
+            <option value="Pedals">페달</option>
+            <option value="Cockpit">콕핏(핸들바,헤드셋 등)</option>
+            <option value="Components">기타 컴포넌트</option>
+            <option value="Expendables">소모품 관리</option>
             </select>
-
+            <br>
+            <h2 class="h6 pb-1 mb-2">취급 주요 브랜드 *</h2>
+            <select class="form-select form-select-lg" data-select='{
+              "classNames": {
+                "containerInner": ["form-select", "form-select-lg"]
+              }
+            }' multiple aria-label="Select categories">
+            <option value=""></option>
+            <option value="">Select brand</option>
+                      <option value="Argon">Argon 18</option>
+                      <option value="Basso">Basso</option>
+                      <option value="BH">BH</option>
+                      <option value="Bianchi">Bianchi</option>
+                      <option value="BMC">BMC</option>
+                      <option value="Bottecchia">Bottecchia</option>
+                      <option value="Brompton">Brompton</option>
+                      <option value="Cannondale">Cannondale</option>
+                      <option value="Canyon">Canyon</option>
+                      <option value="Cervélo">Cervélo</option>
+                      <option value="Cinelli">Cinelli</option>
+                      <option value="Colnago">Colnago</option>
+                      <option value="Condor">Condor</option>
+                      <option value="Cube">Cube</option>
+                      <option value="Dare">Dare</option>
+                      <option value="De Rosa">De Rosa</option>
+                      <option value="Eddy_Merckx">Eddy Merckx</option>
+                      <option value="Factor">Factor</option>
+                      <option value="Felt">Felt</option>
+                      <option value="Focus">Focus</option>
+                      <option value="Fuji">Fuji</option>
+                      <option value="Giant">Giant</option>
+                      <option value="Lapierre">Lapierre</option>
+                      <option value="Look" selected>Look</option>
+                      <option value="Marin">Marin</option>
+                      <option value="Merida">Merida</option>
+                      <option value="Orbea">Orbea</option>
+                      <option value="Passoni">Passoni</option>
+                      <option value="Pinarello">Pinarello</option>
+                      <option value="Ridley">Ridley</option>
+                      <option value="Scott">Scott</option>
+                      <option value="Specialized">Specialized</option>
+                      <option value="Tern">Tern</option>
+                      <option value="Trek">Trek</option>
+                      <option value="Wilier">Wilier</option>
+            </select>
             <!-- Services (checkboxes) -->
-            <h2 class="h6 pt-3 mt-3">I provide these services:</h2>
+            <h2 class="h6 pt-3 mt-3">편의시설:</h2>
             <div class="row row-cols-2 row-cols-md-3 gy-3 gx-4">
               <div class="col">
                 <div class="form-check mb-0">
-                  <input type="checkbox" class="form-check-input" id="rendering" checked>
-                  <label for="rendering" class="form-check-label">3D rendering</label>
+                  <input type="checkbox" class="form-check-input" id="parking" checked>
+                  <label for="parking" class="form-check-label">주차장</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check mb-0">
-                  <input type="checkbox" class="form-check-input" id="deck-building">
-                  <label for="deck-building" class="form-check-label">Deck Building</label>
+                  <input type="checkbox" class="form-check-input" id="wifi" checked>
+                  <label for="wifi" class="form-check-label">WiFi</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check mb-0">
-                  <input type="checkbox" class="form-check-input" id="architectural-design" checked>
-                  <label for="architectural-design" class="form-check-label">Architectural Design</label>
+                  <input type="checkbox" class="form-check-input" id="cctv">
+                  <label for="cctv" class="form-check-label">CCTV</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check mb-0">
-                  <input type="checkbox" class="form-check-input" id="bathroom-design" checked>
-                  <label for="bathroom-design" class="form-check-label">Bathroom Design</label>
+                  <input type="checkbox" class="form-check-input" id="cafe" checked>
+                  <label for="cafe" class="form-check-label">카페</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check mb-0">
-                  <input type="checkbox" class="form-check-input" id="house-remodeling">
-                  <label for="house-remodeling" class="form-check-label">House Remodeling</label>
+                  <input type="checkbox" class="form-check-input" id="pet">
+                  <label for="pet" class="form-check-label">반려동물 동반</label>
                 </div>
               </div>
-              <div class="col">
+              <!-- <div class="col">
                 <div class="form-check mb-0">
                   <input type="checkbox" class="form-check-input" id="chimney-construction">
                   <label for="chimney-construction" class="form-check-label">Chimney Construction</label>
@@ -620,11 +662,11 @@
                   <input type="checkbox" class="form-check-input" id="flooring-installation">
                   <label for="flooring-installation" class="form-check-label">Flooring Installation</label>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <!-- Expandable rows -->
-            <div class="collapse" id="moreServices">
+            <!-- <div class="collapse" id="moreServices">
               <div class="row row-cols-2 row-cols-md-3 gy-3 gx-4 pt-3">
                 <div class="col">
                   <div class="form-check mb-0">
@@ -699,20 +741,20 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Show more button -->
-            <div class="nav">
+            <!-- <div class="nav">
               <a class="nav-link position-relative px-0 pb-0 collapsed mt-3" href="#moreServices" data-bs-toggle="collapse" aria-expanded="false" aria-controls="moreServices" aria-label="Show / hide services">
                 <span class="hover-effect-underline stretched-link" data-label-collapsed="Show more" data-label-expanded="Show less"></span>
                 <i class="collapse-toggle-icon fi-chevron-down fs-base mt-1 ms-1"></i>
               </a>
-            </div>
+            </div> -->
 
             <!-- Next step button -->
             <div class="pt-5">
               <a class="btn btn-lg btn-dark" href="add-contractor-profile.html">
-                Go to profile details
+                상세 소개 설정으로
                 <i class="fi-chevron-right fs-lg ms-1 me-n2"></i>
               </a>
             </div>

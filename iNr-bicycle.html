@@ -251,7 +251,7 @@
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">구동계 정비,점검</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col pt-3">
                     <div class="row" style="margin-top: 1ex;">
                       <div class="col-6">
@@ -313,12 +313,13 @@
                       <p class="fs-sm mb-2">정비 내역을 기입해주세요.</p>
                       <textarea class="form-control form-control-lg" rows="5" id="description" placeholder="최대 2000자" required></textarea>
                   </div>
+                </div>
               <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded d-none d-block-dark"></div>
             </section>
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">브레이크 정비,점검</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col pt-3">
                     <div class="row" style="margin-top: 1ex;">
                       <div class="col-6">
@@ -385,7 +386,7 @@
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">휠셋 정비,점검</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col pt-3">
                     <div class="row" style="margin-top: 1ex;">
                       <div class="col-6">
@@ -452,7 +453,7 @@
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">콕핏 정비,점검</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col pt-3">
                     <div class="row" style="margin-top: 1ex;">
                       <div class="col">
@@ -511,7 +512,7 @@
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">기타 컴포넌트 정비,점검</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col pt-3">
                     <div class="row" style="margin-top: 1ex;">
                       <div class="col">
@@ -571,7 +572,7 @@
             <section class="position-relative bg-body rounded p-4 mt-4">
               <div class="position-relative z-1 pb-md-2 px-md-2">
                 <h2 class="h4 mb-3 mb-sm-4">소모품 교체</h2>
-                <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 mb-3 mb-md-4">
+                <div class="row row-cols-1 row-cols-md-2 g-3 g-md-4 mb-3 mb-md-4">
                   <div class="col">
                     <label class="form-label">소모품 *</label>
                     <select class="form-select" data-select multiple aria-label="Multiple select">
@@ -584,6 +585,13 @@
                       <option value="6">클릿</option>
                       <option value="7">기타</option>
                     </select>
+                  </div>
+                  <div class="col">
+                    <label for="date-1" class="form-label">소모품 교체일</label>
+                    <div class="position-relative">
+                      <input type="text" class="form-control form-icon-end" id="date-1" data-datepicker placeholder="날짜를 선택해주세요">
+                      <i class="fi-calendar position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                    </div>
                   </div>
                   <div class="col">
                     <label class="form-label">소모품 교체비용 1</label>
@@ -634,17 +642,7 @@
                       <input type="text" style="text-align: right;" class="form-control" aria-label="Amount (to the nearest dollar)">
                       <span class="input-group-text">원</span>
                     </div>
-                  </div>
-                  <div class="col">
-                    <label class="form-label">소모품 교체비용 1</label>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text">
-                        ₩
-                      </span>
-                      <input type="text" style="text-align: right;" class="form-control" aria-label="Amount (to the nearest dollar)">
-                      <span class="input-group-text">원</span>
-                    </div>
-                  </div>
+                  </div>                  
                   <div class="col">
                     <label class="form-label">총 소모품 교체비용</label>
                     <div class="input-group mb-3">
