@@ -209,7 +209,7 @@
               <h1 class="display-3 text-white text-center text-md-start pb-sm-2 pb-md-3 pb-lg-0 pb-xxl-3 mb-4 mb-lg-5">자전거 점검 & 정비</h1>
 
               <!-- Search form -->
-              <form class="bg-white border rounded p-2" data-bs-theme="light">
+              <form class="bg-white border rounded p-2 needs-validation" data-bs-theme="light" novalidate>
                 <div class="d-flex flex-column flex-lg-row gap-2 p-1">
                   <div class="d-flex flex-column flex-sm-row w-100 gap-2 gap-sm-3">
                     <div class="position-relative w-100">
@@ -219,28 +219,24 @@
                     <hr class="d-sm-none m-0">
                     <hr class="vr d-none d-sm-block my-2">
                     <div class="position-relative w-100" style="max-width: 190px">
-                      <i class="fi-map-pin position-absolute top-50 start-0 translate-middle-y z-1 fs-xl text-secondary-emphasis ms-2"></i>
+                      <i class="fi-navigation position-absolute top-50 start-0 translate-middle-y z-1 fs-xl text-secondary-emphasis ms-2"></i>
                       <select class="form-select form-select-lg form-icon-start border-0" data-select='{
                         "classNames": {
                           "containerInner": ["form-select", "form-select-lg", "form-icon-start", "border-0"]
                         },
-                        "searchEnabled": true
+                        "searchEnabled": false
                       }' aria-label="Location select" required>
-                        <option value="">Location</option>
-                        <option value="New York">New York</option>
-                        <option value="Los Angeles">Los Angeles</option>
-                        <option value="Chicago">Chicago</option>
-                        <option value="Houston">Houston</option>
-                        <option value="Phoenix">Phoenix</option>
-                        <option value="Philadelphia">Philadelphia</option>
-                        <option value="San Antonio">San Antonio</option>
-                        <option value="San Diego">San Diego</option>
-                        <option value="Dallas">Dallas</option>
-                        <option value="San Jose">San Jose</option>
+                        <option value="">Any radius</option>
+                        <option value="5 mi" selected>5 mi</option>
+                        <option value="10 mi">10 mi</option>
+                        <option value="20 mi">20 mi</option>
+                        <option value="30 mi">30 mi</option>
+                        <option value="40 mi">40 mi</option>
+                        <option value="50 mi">50 mi</option>
                       </select>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-lg btn-primary">Search</button>
+                  <button type="submit" class="btn btn-lg btn-primary">찾기</button>
                 </div>
               </form>
             </div>
